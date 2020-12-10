@@ -9,14 +9,14 @@ using System.Reflection;
 namespace Infrastructure.Common.Extensions.OpenApi
 {
     /// <summary>Методы-расширения для подключения и использования<see cref="OpenApi"/></summary>
-    public static class SwaggerExtensions
+    public static class OpenApiExtensions
     {
         private static Settings? _settings;
 
         /// <summary>Add services.AddSwaggerExtension(Configuration) to ConfigureServices in Startup.cs</summary>
         /// <param name="services"><see cref="IServiceCollection"/></param>
         /// <param name="configuration"><see cref="IConfiguration"/></param>
-        public static void AddSwaggerExtension(this IServiceCollection services, IConfiguration configuration)
+        public static void AddOpenApiExtension(this IServiceCollection services, IConfiguration configuration)
         {
             _settings = configuration.GetSection("Swagger").Get<Settings>() ?? new Settings()
             {
@@ -42,7 +42,7 @@ namespace Infrastructure.Common.Extensions.OpenApi
 
         /// <summary>Add app.UseSwaggerExtension() to Configure in Startup.cs</summary>
         /// <param name="app"><see cref="IApplicationBuilder"/></param>
-        public static void UseSwaggerExtension(this IApplicationBuilder app)
+        public static void UseOpenApiExtension(this IApplicationBuilder app)
         {
             app.UseSwagger(c =>
             {
