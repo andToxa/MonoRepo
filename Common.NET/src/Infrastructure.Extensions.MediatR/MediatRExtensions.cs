@@ -2,11 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace Infrastructure.Common.Extensions.MediatR
+namespace Infrastructure.Extensions.MediatR
 {
     internal static class MediatRExtensions
     {
-        private static string ApplicationProjectNameSpace => $"{nameof(Application)}"; // todo проверить корректность регистрации
+        private static string ApplicationProjectNameSpace => "Application"; // todo проверить корректность регистрации
 
         /// <summary>
         /// Добавление MediatR.

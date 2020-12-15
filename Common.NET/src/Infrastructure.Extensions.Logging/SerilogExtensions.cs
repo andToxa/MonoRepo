@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Infrastructure.Common.Extensions.Logging
+namespace Infrastructure.Extensions.Logging
 {
     /// <summary>Методы-расширения для подключения и использования<see cref="Serilog"/></summary>
     public static class SerilogExtensions
