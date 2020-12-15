@@ -8,9 +8,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Api", "src\Infrastructure.Api\Infrastructure.Api.csproj", "{647CAE04-A543-484F-89EA-51885DE40CCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.Logging", "..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj", "{5D389974-75A7-4687-8F67-EC071D83D391}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Extensions.Logging", "..\Common.NET\src\Infrastructure.Extensions.Logging\Infrastructure.Extensions.Logging.csproj", "{5D389974-75A7-4687-8F67-EC071D83D391}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.OpenApi", "..\Common.NET\src\Infrastructure.Common.Extensions.OpenApi\Infrastructure.Common.Extensions.OpenApi.csproj", "{231B9E9D-F4B6-4464-9CD8-62EB8AB84240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Extensions.OpenApi", "..\Common.NET\src\Infrastructure.Extensions.OpenApi\Infrastructure.Extensions.OpenApi.csproj", "{231B9E9D-F4B6-4464-9CD8-62EB8AB84240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common", "..\Common.NET\src\Application.Common\Application.Common.csproj", "{0AF96994-70E7-414C-9D96-F7F54E43D59C}"
 EndProject
@@ -18,7 +18,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Common", "..\Common.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common", "..\Common.NET\src\Infrastructure.Common\Infrastructure.Common.csproj", "{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.MediatR", "..\Common.NET\src\Infrastructure.Common.Extensions.MediatR\Infrastructure.Common.Extensions.MediatR.csproj", "{99D61B7C-6FFD-4F95-B35D-0858803E5D77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Extensions.MediatR", "..\Common.NET\src\Infrastructure.Extensions.MediatR\Infrastructure.Extensions.MediatR.csproj", "{99D61B7C-6FFD-4F95-B35D-0858803E5D77}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
