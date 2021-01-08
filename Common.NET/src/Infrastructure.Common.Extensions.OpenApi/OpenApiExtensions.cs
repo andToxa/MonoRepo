@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Infrastructure.Extensions.OpenApi
+namespace Infrastructure.Common.Extensions.OpenApi
 {
     /// <summary>Методы-расширения для подключения и использования<see cref="OpenApi"/></summary>
     public static class OpenApiExtensions

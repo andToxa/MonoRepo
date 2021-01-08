@@ -1,14 +1,14 @@
 ﻿using MediatR;
 using System;
 
-namespace Application.Common.CQRS.Events
+namespace Application.Common.CQRS
 {
     /// <inheritdoc />
-    public class GenericEvent<T> : INotification
+    public class Event<T> : INotification
     {
-        /// <summary>Initializes a new instance of the <see cref="GenericEvent{T}"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="Event{T}"/> class.</summary>
         /// <param name="data">Данные доменного события</param>
-        public GenericEvent(T data)
+        public Event(T data)
         {
             DomainEvent = data ?? throw new ArgumentNullException(nameof(data));
         }
