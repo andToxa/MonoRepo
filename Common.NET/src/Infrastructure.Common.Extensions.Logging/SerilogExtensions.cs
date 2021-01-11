@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 
 namespace Infrastructure.Common.Extensions.Logging
@@ -9,7 +10,7 @@ namespace Infrastructure.Common.Extensions.Logging
         /// <summary>Использование <see cref="Serilog"/></summary>
         /// <param name="app"><see cref="IHostBuilder"/></param>
         /// <returns><seealso cref="IHostBuilder"/></returns>
-        public static IHostBuilder UseSerilogExtension(this IHostBuilder app)
+        public static IWebHostBuilder UseSerilog(this IWebHostBuilder app)
         {
             return app.UseSerilog((context, configuration) =>
             {
