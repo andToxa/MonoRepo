@@ -16,7 +16,7 @@ namespace Infrastructure.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-                        .UseSerilog()
+                        .UseLogging()
                         .UseStartup<Startup>();
                 });
     }
