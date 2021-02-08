@@ -19,12 +19,6 @@ ProjectSection(SolutionItems) = preProject
 	README.md = README.md
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.Logging", "..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj", "{D75BAC5F-8559-471D-BAA4-097DA4034D28}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.MediatR", "..\Common.NET\src\Infrastructure.Common.Extensions.MediatR\Infrastructure.Common.Extensions.MediatR.csproj", "{0D0A0061-5C10-4E31-853D-26A1B891F487}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.OpenApi", "..\Common.NET\src\Infrastructure.Common.Extensions.OpenApi\Infrastructure.Common.Extensions.OpenApi.csproj", "{1D81F54B-EF2B-4DD1-8A60-21A20239D3AB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,17 +53,5 @@ Global
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D75BAC5F-8559-471D-BAA4-097DA4034D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D75BAC5F-8559-471D-BAA4-097DA4034D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D75BAC5F-8559-471D-BAA4-097DA4034D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D75BAC5F-8559-471D-BAA4-097DA4034D28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D0A0061-5C10-4E31-853D-26A1B891F487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D0A0061-5C10-4E31-853D-26A1B891F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D0A0061-5C10-4E31-853D-26A1B891F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D0A0061-5C10-4E31-853D-26A1B891F487}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1D81F54B-EF2B-4DD1-8A60-21A20239D3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D81F54B-EF2B-4DD1-8A60-21A20239D3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D81F54B-EF2B-4DD1-8A60-21A20239D3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D81F54B-EF2B-4DD1-8A60-21A20239D3AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
