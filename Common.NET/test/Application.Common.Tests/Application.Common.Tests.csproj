@@ -4,6 +4,8 @@
         <TargetFramework>net5.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <LangVersion>9</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Application.Common.Extensions\Application.Common.Extensions.csproj" />
+      <ProjectReference Include="..\..\src\Application.Common\Application.Common.csproj" />
     </ItemGroup>
 
 </Project>

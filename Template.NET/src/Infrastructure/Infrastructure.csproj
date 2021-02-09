@@ -6,8 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj" />
-      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common.Extensions.OpenApi\Infrastructure.Common.Extensions.OpenApi.csproj" />
       <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common\Infrastructure.Common.csproj" />
       <ProjectReference Include="..\Application\Application.csproj" />
     </ItemGroup>
