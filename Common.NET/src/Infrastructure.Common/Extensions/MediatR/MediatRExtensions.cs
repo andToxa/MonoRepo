@@ -7,13 +7,11 @@ namespace Infrastructure.Common.Extensions.MediatR
     /// <summary>Методы-расширения для <see cref="IMediator"/></summary>
     public static class MediatRExtensions
     {
-        private static string ApplicationProjectNameSpace => "Application"; // todo проверить корректность регистрации
-
         /// <summary>Добавление MediatR.</summary>
         /// <param name="services">Коллекция сервисов.</param>
         /// <returns><see cref="IServiceCollection"/>.</returns>
         public static IServiceCollection AddMediator(this IServiceCollection services) => services
-            .AddMediatR(services.GetType()) // todo проверить корректность регистрации
+            .AddMediatR(services.GetType())
             .AddPipelineBehavior()
             .AddDomainHandlers();
 
@@ -24,15 +22,10 @@ namespace Infrastructure.Common.Extensions.MediatR
             .Scan(scan =>
             {
                 scan
-                    .FromAssemblies(Assembly.Load(ApplicationProjectNameSpace))
-                    .AddClasses(classes => classes
-                        .AssignableTo(typeof(IRequestHandler<>)))
-                    .AsImplementedInterfaces()
-                    .AddClasses(classes => classes
-                        .AssignableTo(typeof(IRequestHandler<,>)))
-                    .AddClasses(classes => classes
-                        .AssignableTo(typeof(INotificationHandler<>)))
-                    .AsImplementedInterfaces()
+                    .FromAssemblies(Assembly.Load(nameof(Application)))
+                    .AddClasses(classes => classes.AssignableTo(typeof(IRequestHandler<>))).AsImplementedInterfaces()
+                    .AddClasses(classes => classes.AssignableTo(typeof(IRequestHandler<,>))).AsImplementedInterfaces()
+                    .AddClasses(classes => classes.AssignableTo(typeof(INotificationHandler<>))).AsImplementedInterfaces()
                     .WithScopedLifetime();
             });
 
@@ -43,7 +36,7 @@ namespace Infrastructure.Common.Extensions.MediatR
             .Scan(scan =>
             {
                 scan
-                    .FromAssemblies(Assembly.Load(ApplicationProjectNameSpace))
+                    .FromAssemblies(Assembly.Load(nameof(Application)))
                     .AddClasses(classes => classes
                         .AssignableTo(typeof(IPipelineBehavior<,>)))
                     .AsImplementedInterfaces()

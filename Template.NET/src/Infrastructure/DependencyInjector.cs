@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Application.Common.CQRS;
+using Domain.Common;
+using Infrastructure.Common.Extensions.MediatR;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,6 +16,8 @@ namespace Infrastructure
         /// <returns><seealso cref="IServiceCollection"/></returns>
         public static IServiceCollection AddOwnServices(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<IEventBus, EventBus>();
+            services.AddMediator();
             return services;
         }
 

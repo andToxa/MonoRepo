@@ -14,6 +14,7 @@ namespace Infrastructure.Common.Extensions.Logging
             return app.UseSerilog((context, configuration) =>
             {
                 configuration
+                    .WriteTo.Console()
                     .Enrich.FromLogContext();
             });
         }
