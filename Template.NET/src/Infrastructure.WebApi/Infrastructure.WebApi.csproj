@@ -9,5 +9,13 @@
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Extensions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="Extensions\OpenApi\SwaggerExtensions.appsettings.json" />
+    </ItemGroup>
+
 
 </Project>

@@ -3,7 +3,7 @@ using Application.CQRS.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Api.Controllers
+namespace Infrastructure.WebApi.Controllers
 {
     /// <inheritdoc />
     public class ExampleController : BaseController

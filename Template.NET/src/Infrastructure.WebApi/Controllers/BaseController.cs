@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Infrastructure.Api.Controllers
+namespace Infrastructure.WebApi.Controllers
 {
     /// <summary>Base controller</summary>
     [Route("api/[controller]")]

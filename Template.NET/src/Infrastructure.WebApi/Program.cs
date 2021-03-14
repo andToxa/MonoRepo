@@ -1,8 +1,8 @@
-﻿using Infrastructure.Common.Extensions.Logging;
+﻿using Infrastructure.Common.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Infrastructure.Api
+namespace Infrastructure.WebApi
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Infrastructure.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-                        .UseLogging()
+                        .UseInfrastructureCommon()
                         .UseStartup<Startup>();
                 });
     }

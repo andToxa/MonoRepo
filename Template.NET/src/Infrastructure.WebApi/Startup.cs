@@ -1,5 +1,6 @@
-﻿using Infrastructure.Common.Extensions.MediatR;
-using Infrastructure.Common.Extensions.OpenApi;
+﻿using Application.Extensions;
+using Infrastructure.Extensions;
+using Infrastructure.WebApi.Extensions.OpenApi;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
-namespace Infrastructure.Api
+namespace Infrastructure.WebApi
 {
     /// <summary>Startup configuration</summary>
     public class Startup
@@ -30,8 +31,8 @@ namespace Infrastructure.Api
         {
             services.AddOptions();
             services.AddHealthChecks();
-            services.AddMediator();
-            services.AddOwnServices(_configuration);
+            services.AddApplication(_configuration);
+            services.AddInfrastructure(_configuration);
             services
                 .AddControllers()
                 .AddJsonOptions(options => options.JsonSerializerOptions.IgnoreNullValues = true);
@@ -57,8 +58,6 @@ namespace Infrastructure.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseOwnServices();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
