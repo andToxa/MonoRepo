@@ -1,5 +1,5 @@
-﻿using Application.Common.CQRS;
-using Domain.Common;
+﻿using Application.Common.Services;
+using Domain.Common.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,7 +17,7 @@ namespace Application.Common.Extensions
         public static IServiceCollection AddApplicationCommon(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddMediator();
-            services.AddScoped<IEventBus, EventBus>();
+            services.AddScoped<IEventBusService, EventBusService>();
             return services;
         }
 

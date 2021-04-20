@@ -1,12 +1,12 @@
-﻿using Application.Common.CQRS;
-using Domain.Example.Events;
+﻿using Application.Common.Events;
+using Domain.ExampleContext.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.CQRS.Events
+namespace Application.ExampleContext.Events
 {
     /// <inheritdoc />
     public class ExampleEventHandler : INotificationHandler<Event<ExampleEvent>>

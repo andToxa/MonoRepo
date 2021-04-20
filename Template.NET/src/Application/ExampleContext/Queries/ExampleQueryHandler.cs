@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.CQRS.Queries
+namespace Application.ExampleContext.Queries
 {
     /// <inheritdoc />
     public class ExampleQueryHandler : IRequestHandler<ExampleQuery, ExampleQueryResult>

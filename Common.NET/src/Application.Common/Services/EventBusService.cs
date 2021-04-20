@@ -1,18 +1,19 @@
-﻿using Domain.Common;
+﻿using Application.Common.Events;
+using Domain.Common.Services;
 using MediatR;
 using System;
 using System.Threading.Tasks;
 
-namespace Application.Common.CQRS
+namespace Application.Common.Services
 {
     /// <inheritdoc />
-    public class EventBus : IEventBus
+    public class EventBusService : IEventBusService
     {
         private readonly IMediator _mediator;
 
-        /// <summary>Initializes a new instance of the <see cref="EventBus"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="EventBusService"/> class.</summary>
         /// <param name="mediator"><see cref="IMediator"/></param>
-        public EventBus(IMediator mediator)
+        public EventBusService(IMediator mediator)
         {
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }

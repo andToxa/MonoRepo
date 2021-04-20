@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.CQRS.Commands
+namespace Application.ExampleContext.Commands
 {
     /// <summary>Пример команды</summary>
     public class ExampleCommand : IRequest

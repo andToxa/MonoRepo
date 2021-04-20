@@ -1,28 +1,28 @@
-﻿using Domain.Common;
-using Domain.Example.Events;
+﻿using Domain.Common.Services;
+using Domain.ExampleContext.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.CQRS.Commands
+namespace Application.ExampleContext.Commands
 {
     /// <inheritdoc />
     public class ExampleCommandHandler : AsyncRequestHandler<ExampleCommand>
     {
         private readonly ILogger<ExampleCommandHandler> _logger;
-        private readonly IEventBus _eventBus;
+        private readonly IEventBusService _eventBusService;
 
         /// <summary>Initializes a new instance of the <see cref="ExampleCommandHandler"/> class.</summary>
         /// <param name="logger"><see cref="ILogger{TCategoryName}"/></param>
-        /// <param name="eventBus"><see cref="IEventBus"/></param>
+        /// <param name="eventBusService"><see cref="IEventBusService"/></param>
         public ExampleCommandHandler(
             ILogger<ExampleCommandHandler> logger,
-            IEventBus eventBus)
+            IEventBusService eventBusService)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _eventBus = eventBus ?? throw new ArgumentNullException(nameof(eventBus));
+            _eventBusService = eventBusService ?? throw new ArgumentNullException(nameof(eventBusService));
         }
 
         /// <inheritdoc />
@@ -31,7 +31,7 @@ namespace Application.CQRS.Commands
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
-                _eventBus.PublishAsync(new ExampleEvent()).ConfigureAwait(false);
+                _eventBusService.PublishAsync(new ExampleEvent()).ConfigureAwait(false);
                 throw new System.NotImplementedException();
             }
             catch (Exception e)

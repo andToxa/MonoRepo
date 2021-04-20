@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace Application.Common.CQRS
+namespace Application.Common.Events
 {
     /// <inheritdoc />
     public class Event<T> : INotification

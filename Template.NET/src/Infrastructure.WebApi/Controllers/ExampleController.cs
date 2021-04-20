@@ -1,5 +1,5 @@
-﻿using Application.CQRS.Commands;
-using Application.CQRS.Queries;
+﻿using Application.ExampleContext.Commands;
+using Application.ExampleContext.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 
-namespace Domain.Common
+namespace Domain.Common.Services
 {
     /// <summary>Шина доменных событий</summary>
-    public interface IEventBus
+    public interface IEventBusService
     {
         /// <summary>Публикация доменного события</summary>
         /// <param name="domainEvent">Данные доменного события</param>
