@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Application.ExampleContext.Commands
 {
     /// <inheritdoc />
-    public class ExampleCommandHandler : AsyncRequestHandler<ExampleCommand>
+    public class ExampleCommandHandler : IRequestHandler<ExampleCommand>
     {
         private readonly ILogger<ExampleCommandHandler> _logger;
         private readonly IEventBusService _eventBusService;
@@ -26,13 +26,13 @@ namespace Application.ExampleContext.Commands
         }
 
         /// <inheritdoc />
-        protected override Task Handle(ExampleCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(ExampleCommand request, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
-                _eventBusService.PublishAsync(new ExampleEvent()).ConfigureAwait(false);
-                throw new System.NotImplementedException();
+                await _eventBusService.PublishAsync(new ExampleEvent());
+                throw new NotImplementedException();
             }
             catch (Exception e)
             {

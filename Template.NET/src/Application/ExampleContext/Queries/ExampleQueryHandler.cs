@@ -24,7 +24,7 @@ namespace Application.ExampleContext.Queries
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             catch (Exception e)
             {

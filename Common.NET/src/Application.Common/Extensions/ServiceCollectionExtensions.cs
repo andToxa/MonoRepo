@@ -3,7 +3,6 @@ using Domain.Common.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 namespace Application.Common.Extensions
 {
@@ -23,17 +22,10 @@ namespace Application.Common.Extensions
 
         private static IServiceCollection AddMediator(this IServiceCollection services)
         {
-            services
-                .AddMediatR(services.GetType());
-            services
-                .Scan(scan =>
-                    scan
-                        .FromAssemblies(Assembly.Load(nameof(Application)))
-                        .AddClasses(classes => classes.AssignableTo(typeof(IPipelineBehavior<,>)))
-                        .AddClasses(classes => classes.AssignableTo(typeof(IRequestHandler<>))).AsImplementedInterfaces()
-                        .AddClasses(classes => classes.AssignableTo(typeof(IRequestHandler<,>))).AsImplementedInterfaces()
-                        .AddClasses(classes => classes.AssignableTo(typeof(INotificationHandler<>))).AsImplementedInterfaces()
-                        .WithScopedLifetime());
+            // шина событий
+            services.AddMediatR(services.GetType());
+            services.AddScoped<IEventBusService, EventBusService>();
+
             return services;
         }
     }

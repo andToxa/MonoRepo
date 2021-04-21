@@ -26,7 +26,7 @@ namespace Application.ExampleContext.Events
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             catch (Exception e)
             {
