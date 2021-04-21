@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Api", "src\Infrastructure.Api\Infrastructure.Api.csproj", "{647CAE04-A543-484F-89EA-51885DE40CCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.WebApi", "src\Infrastructure.WebApi\Infrastructure.WebApi.csproj", "{647CAE04-A543-484F-89EA-51885DE40CCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common", "..\Common.NET\src\Application.Common\Application.Common.csproj", "{0AF96994-70E7-414C-9D96-F7F54E43D59C}"
 EndProject
