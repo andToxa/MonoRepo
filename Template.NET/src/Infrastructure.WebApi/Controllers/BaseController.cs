@@ -6,8 +6,8 @@ using System;
 namespace Infrastructure.WebApi.Controllers
 {
     /// <summary>Base controller</summary>
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class BaseController : ControllerBase
     {
         private IMediator? _mediator;

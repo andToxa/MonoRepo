@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Serilog;
+using Serilog.Formatting.Compact;
 
 namespace Infrastructure.Common.Extensions
 {
@@ -19,7 +20,7 @@ namespace Infrastructure.Common.Extensions
             webHostBuilder.UseSerilog((context, configuration) =>
             {
                 configuration
-                    .WriteTo.Console()
+                    .WriteTo.Console(new CompactJsonFormatter())
                     .Enrich.FromLogContext();
             });
     }

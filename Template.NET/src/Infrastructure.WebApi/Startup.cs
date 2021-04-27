@@ -1,6 +1,6 @@
 ﻿using Application.Extensions;
 using Infrastructure.Extensions;
-using Infrastructure.WebApi.Extensions.OpenApi;
+using Infrastructure.WebApi.Extensions.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
