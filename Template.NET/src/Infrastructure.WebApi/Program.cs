@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Common.Extensions;
+using Infrastructure.WebApi.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 

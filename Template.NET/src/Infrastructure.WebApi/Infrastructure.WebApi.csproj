@@ -6,15 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.WebApi.Extensions.Swagger\Infrastructure.WebApi.Extensions.Swagger.csproj" />
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Extensions" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Include="Extensions\Swagger\SwaggerExtensions.appsettings.json" />
     </ItemGroup>
 
 
