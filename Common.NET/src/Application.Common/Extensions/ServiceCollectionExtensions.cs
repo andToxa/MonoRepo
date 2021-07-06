@@ -15,15 +15,9 @@ namespace Application.Common.Extensions
         /// <returns><seealso cref="IServiceCollection"/></returns>
         public static IServiceCollection AddApplicationCommon(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddMediator();
-            services.AddScoped<IEventBusService, EventBusService>();
-            return services;
-        }
-
-        private static IServiceCollection AddMediator(this IServiceCollection services)
-        {
-            // шина событий
             services.AddMediatR(services.GetType());
+
+            // шина событий
             services.AddScoped<IEventBusService, EventBusService>();
 
             return services;

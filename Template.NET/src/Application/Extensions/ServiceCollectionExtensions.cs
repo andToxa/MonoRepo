@@ -21,10 +21,10 @@ namespace Application.Extensions
         {
             services.AddApplicationCommon(configuration);
 
-            // обработчики запросов
+            // обработчики команд
             services.AddScoped<IRequestHandler<ExampleCommand, Unit>, ExampleCommandHandler>();
 
-            // обработчики команд
+            // обработчики запросов
             services.AddScoped<IRequestHandler<ExampleQuery, ExampleQueryResult>, ExampleQueryHandler>();
 
             // обработчики событий
