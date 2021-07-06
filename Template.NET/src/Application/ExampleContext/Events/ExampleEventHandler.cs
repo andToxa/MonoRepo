@@ -26,6 +26,7 @@ namespace Application.ExampleContext.Events
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
+                _logger.LogInformation("{Event}", notification.Data.ToString());
                 throw new NotImplementedException();
             }
             catch (Exception e)

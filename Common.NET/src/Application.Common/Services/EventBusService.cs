@@ -27,8 +27,8 @@ namespace Application.Common.Services
         /// <inheritdoc />
         public async Task PublishAsync<T>(T domainEvent)
         {
-            _logger.LogInformation("Event published: {@Event}", domainEvent);
             await _mediator.Publish(new Event<T>(domainEvent));
+            _logger.LogInformation("Event published: {@Event}", domainEvent);
         }
     }
 }
