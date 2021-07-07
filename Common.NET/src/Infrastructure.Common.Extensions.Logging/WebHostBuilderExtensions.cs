@@ -2,7 +2,7 @@
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace Infrastructure.WebApi.Extensions
+namespace Infrastructure.Common.Extensions.Logging
 {
     /// <summary>Класс-расширение для <see cref="IWebHostBuilder"/></summary>
     public static class WebHostBuilderExtensions

@@ -1,5 +1,4 @@
-﻿using Infrastructure.Common.Extensions;
-using Infrastructure.WebApi.Extensions;
+﻿using Infrastructure.Common.Extensions.Logging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 

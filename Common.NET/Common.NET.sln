@@ -17,6 +17,10 @@ EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common.Tests", "test\Application.Common.Tests\Application.Common.Tests.csproj", "{1812CCF5-FC7E-462B-9BED-AC5E6CE3C83C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.Logging", "src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj", "{7735BBCA-6B33-4D8C-8427-E53C8910356F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.WebApi.Extensions.Swagger", "src\Infrastructure.WebApi.Extensions.Swagger\Infrastructure.WebApi.Extensions.Swagger.csproj", "{6343FA47-066C-4BC8-B4D5-4223DED10E63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,11 +43,21 @@ Global
 		{1812CCF5-FC7E-462B-9BED-AC5E6CE3C83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1812CCF5-FC7E-462B-9BED-AC5E6CE3C83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1812CCF5-FC7E-462B-9BED-AC5E6CE3C83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7735BBCA-6B33-4D8C-8427-E53C8910356F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7735BBCA-6B33-4D8C-8427-E53C8910356F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7735BBCA-6B33-4D8C-8427-E53C8910356F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7735BBCA-6B33-4D8C-8427-E53C8910356F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6343FA47-066C-4BC8-B4D5-4223DED10E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6343FA47-066C-4BC8-B4D5-4223DED10E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6343FA47-066C-4BC8-B4D5-4223DED10E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6343FA47-066C-4BC8-B4D5-4223DED10E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B2D5EFF-3E6F-48D8-B211-92A71ADEFEC0} = {8824F233-03BC-4988-8CF1-77075E9BA6BD}
 		{E04081C0-BB5A-49F0-8174-731BACC18008} = {8824F233-03BC-4988-8CF1-77075E9BA6BD}
 		{5A1276D0-2619-49E3-83B8-C8A41262B4CD} = {8824F233-03BC-4988-8CF1-77075E9BA6BD}
 		{1812CCF5-FC7E-462B-9BED-AC5E6CE3C83C} = {FDD6A749-C37E-4FE1-BF23-86CC1BF4F69D}
+		{7735BBCA-6B33-4D8C-8427-E53C8910356F} = {8824F233-03BC-4988-8CF1-77075E9BA6BD}
+		{6343FA47-066C-4BC8-B4D5-4223DED10E63} = {8824F233-03BC-4988-8CF1-77075E9BA6BD}
 	EndGlobalSection
 EndGlobal

@@ -6,8 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj" />
       <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.WebApi.Extensions.Swagger\Infrastructure.WebApi.Extensions.Swagger.csproj" />
       <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Extensions" />
     </ItemGroup>
 
 
