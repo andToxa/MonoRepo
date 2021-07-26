@@ -1,7 +1,7 @@
-﻿using Application.Common.Extensions;
+﻿using Common.Extensions;
 using Xunit;
 
-namespace Application.Common.Tests.Extensions
+namespace Common.Tests.Extensions
 {
     /// <summary>Тесты <see cref="StringExtensions"/></summary>
     public partial class StringExtensionsTests
