@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  template.net:
+    build:
+      context: .
+      dockerfile: Template.NET.Dockerfile
+    network_mode: "bridge"
+    ports:
+      - 8080:8080
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Development
+    entrypoint: ["dotnet", "Infrastructure.WebApi.dll"]
