@@ -10,13 +10,7 @@ namespace Infrastructure.Common.Extensions.Logging
         /// <summary>Использование общей инфраструктуры</summary>
         /// <param name="webHostBuilder"><see cref="IWebHostBuilder"/></param>
         /// <returns><seealso cref="IWebHostBuilder"/></returns>
-        public static IWebHostBuilder UseInfrastructureCommon(this IWebHostBuilder webHostBuilder)
-        {
-            webHostBuilder.UseLogging();
-            return webHostBuilder;
-        }
-
-        private static IWebHostBuilder UseLogging(this IWebHostBuilder webHostBuilder) =>
+        public static IWebHostBuilder UseConsoleLogging(this IWebHostBuilder webHostBuilder) =>
             webHostBuilder.UseSerilog((context, configuration) =>
             {
                 configuration
