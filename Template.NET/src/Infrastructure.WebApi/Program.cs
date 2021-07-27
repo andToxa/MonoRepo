@@ -16,7 +16,7 @@ namespace Infrastructure.WebApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-                        .UseConsoleLogging()
+                        .UseLogging()
                         .UseStartup<Startup>();
                 });
     }
