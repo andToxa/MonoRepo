@@ -1,11 +1,11 @@
-﻿using Application.Common.Events;
-using Domain.Common.Services;
+﻿using Common.Application.Events;
+using Common.Domain.Services;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
 
-namespace Application.Common.Services
+namespace Common.Application.Services
 {
     /// <inheritdoc />
     public class EventBusService : IEventBusService

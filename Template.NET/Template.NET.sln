@@ -6,13 +6,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.WebApi", "src\Infrastructure.WebApi\Infrastructure.WebApi.csproj", "{647CAE04-A543-484F-89EA-51885DE40CCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "src\WebApi\WebApi.csproj", "{647CAE04-A543-484F-89EA-51885DE40CCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common", "..\Common.NET\src\Application.Common\Application.Common.csproj", "{0AF96994-70E7-414C-9D96-F7F54E43D59C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "..\Common.NET\src\Common.Application\Common.Application.csproj", "{0AF96994-70E7-414C-9D96-F7F54E43D59C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Common", "..\Common.NET\src\Domain.Common\Domain.Common.csproj", "{71D7A652-82FD-4A0F-8F58-A7D882ECC466}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "..\Common.NET\src\Common.Domain\Common.Domain.csproj", "{71D7A652-82FD-4A0F-8F58-A7D882ECC466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common", "..\Common.NET\src\Infrastructure.Common\Infrastructure.Common.csproj", "{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "..\Common.NET\src\Common.Infrastructure\Common.Infrastructure.csproj", "{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
@@ -21,15 +21,15 @@ ProjectSection(SolutionItems) = preProject
 	..\Template.NET.Dockerfile = ..\Template.NET.Dockerfile
 EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.WebApi.Extensions.Swagger", "..\Common.NET\src\Infrastructure.WebApi.Extensions.Swagger\Infrastructure.WebApi.Extensions.Swagger.csproj", "{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common.Extensions.Logging", "..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj", "{4B1317AA-3041-4ABA-8642-1CBC1534C062}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure.Extensions.Logging", "..\Common.NET\src\Common.Infrastructure.Extensions.Logging\Common.Infrastructure.Extensions.Logging.csproj", "{4B1317AA-3041-4ABA-8642-1CBC1534C062}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\Common.NET\src\Common\Common.csproj", "{B1ECF235-1582-4A6C-9D09-875861DAB2C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Extensions.Swagger", "..\Common.NET\src\WebApi.Extensions.Swagger\WebApi.Extensions.Swagger.csproj", "{F315CC8A-8490-49B9-BBDC-59269629C06D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,10 +65,6 @@ Global
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B1317AA-3041-4ABA-8642-1CBC1534C062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4B1317AA-3041-4ABA-8642-1CBC1534C062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B1317AA-3041-4ABA-8642-1CBC1534C062}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,6 +73,10 @@ Global
 		{B1ECF235-1582-4A6C-9D09-875861DAB2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1ECF235-1582-4A6C-9D09-875861DAB2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1ECF235-1582-4A6C-9D09-875861DAB2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F315CC8A-8490-49B9-BBDC-59269629C06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F315CC8A-8490-49B9-BBDC-59269629C06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F315CC8A-8490-49B9-BBDC-59269629C06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F315CC8A-8490-49B9-BBDC-59269629C06D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EF7A5EDE-2A5F-414F-B413-8479CE001165} = {5FACB0C7-3546-43A6-BD36-098463DF52E4}
@@ -89,6 +89,6 @@ Global
 		{8B401A76-6BA5-48DD-80E1-4BA0D05F1FCE} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
 		{B1ECF235-1582-4A6C-9D09-875861DAB2C6} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
 		{4B1317AA-3041-4ABA-8642-1CBC1534C062} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
-		{0DED13E1-2AD1-49F9-BE74-FD8DF1A80BD5} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
+		{F315CC8A-8490-49B9-BBDC-59269629C06D} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
 	EndGlobalSection
 EndGlobal

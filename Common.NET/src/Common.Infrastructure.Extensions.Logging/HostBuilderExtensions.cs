@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Infrastructure.Common.Extensions.Logging
+namespace Common.Infrastructure.Extensions.Logging
 {
     /// <summary>Класс-расширение для <see cref="IHostBuilder"/></summary>
     public static class HostBuilderExtensions

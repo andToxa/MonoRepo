@@ -6,8 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common.Extensions.Logging\Infrastructure.Common.Extensions.Logging.csproj" />
-      <ProjectReference Include="..\..\..\Common.NET\src\Infrastructure.Common\Infrastructure.Common.csproj" />
+      <ProjectReference Include="..\..\..\Common.NET\src\Common.Infrastructure.Extensions.Logging\Common.Infrastructure.Extensions.Logging.csproj" />
+      <ProjectReference Include="..\..\..\Common.NET\src\Common.Infrastructure\Common.Infrastructure.csproj" />
       <ProjectReference Include="..\Application\Application.csproj" />
     </ItemGroup>
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Serilog;
 
-namespace Infrastructure.Common.Extensions.Logging
+namespace Common.Infrastructure.Extensions.Logging
 {
     /// <summary>Класс-расширение для <see cref="IWebHostBuilder"/></summary>
     public static class WebHostBuilderExtensions

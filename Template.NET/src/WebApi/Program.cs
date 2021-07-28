@@ -1,8 +1,8 @@
-﻿using Infrastructure.Common.Extensions.Logging;
+﻿using Common.Infrastructure.Extensions.Logging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Infrastructure.WebApi
+namespace WebApi
 {
     internal static class Program
     {

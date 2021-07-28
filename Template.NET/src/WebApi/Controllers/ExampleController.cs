@@ -3,7 +3,7 @@ using Application.ExampleContext.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Infrastructure.WebApi.Controllers
+namespace WebApi.Controllers
 {
     /// <inheritdoc />
     public class ExampleController : BaseController

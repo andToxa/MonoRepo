@@ -1,14 +1,14 @@
 ﻿using Application.Extensions;
 using Infrastructure.Extensions;
-using Infrastructure.WebApi.Extensions.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using WebApi.Extensions.Swagger;
 
-namespace Infrastructure.WebApi
+namespace WebApi
 {
     /// <summary>Startup configuration</summary>
     public class Startup

@@ -2,7 +2,7 @@
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace Infrastructure.Common.Extensions.Logging
+namespace Common.Infrastructure.Extensions.Logging
 {
     /// <summary>Методы расширения для <see cref="LoggerConfiguration"/></summary>
     internal static class LoggerConfigurationExtensions
