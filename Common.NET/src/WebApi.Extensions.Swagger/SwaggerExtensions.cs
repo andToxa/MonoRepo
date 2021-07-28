@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Infrastructure.WebApi.Extensions.Swagger
+namespace WebApi.Extensions.Swagger
 {
     /// <summary>Методы-расширения для подключения и использования Swagger</summary>
     public static class SwaggerExtensions

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure.Common.Extensions
+namespace Common.Infrastructure.Extensions
 {
     /// <summary>Класс-расширения для <see cref="IServiceCollection"/></summary>
     public static class ServiceCollectionExtensions

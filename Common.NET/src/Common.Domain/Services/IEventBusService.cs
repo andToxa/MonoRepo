@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Domain.Common.Services
+namespace Common.Domain.Services
 {
     /// <summary>Шина доменных событий</summary>
     public interface IEventBusService

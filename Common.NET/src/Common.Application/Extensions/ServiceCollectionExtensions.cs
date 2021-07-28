@@ -1,10 +1,10 @@
-﻿using Application.Common.Services;
-using Domain.Common.Services;
+﻿using Common.Application.Services;
+using Common.Domain.Services;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Application.Common.Extensions
+namespace Common.Application.Extensions
 {
     /// <summary>Класс-расширение для <see cref="IServiceCollection"/></summary>
     public static class ServiceCollectionExtensions

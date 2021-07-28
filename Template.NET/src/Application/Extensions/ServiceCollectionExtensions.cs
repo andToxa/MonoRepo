@@ -1,8 +1,8 @@
-﻿using Application.Common.Events;
-using Application.Common.Extensions;
-using Application.ExampleContext.Commands;
+﻿using Application.ExampleContext.Commands;
 using Application.ExampleContext.Events;
 using Application.ExampleContext.Queries;
+using Common.Application.Events;
+using Common.Application.Extensions;
 using Domain.ExampleContext.Events;
 using MediatR;
 using Microsoft.Extensions.Configuration;

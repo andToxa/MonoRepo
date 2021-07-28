@@ -1,4 +1,4 @@
-﻿using Application.Common.Events;
+﻿using Common.Application.Events;
 using Domain.ExampleContext.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;

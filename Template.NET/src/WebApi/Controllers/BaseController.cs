@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Infrastructure.WebApi.Controllers
+namespace WebApi.Controllers
 {
     /// <summary>Base controller</summary>
     [ApiController]

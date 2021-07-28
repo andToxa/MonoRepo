@@ -1,4 +1,4 @@
-﻿using Domain.Common.Services;
+﻿using Common.Domain.Services;
 using System;
 
 namespace Domain.ExampleContext.Entities
