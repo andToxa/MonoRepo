@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.ExampleContext.Queries
+namespace Example.Application.Queries
 {
     /// <summary>Пример запроса</summary>
     public class ExampleQuery : IRequest<ExampleQueryResult>

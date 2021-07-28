@@ -1,7 +1,7 @@
 ﻿using Common.Domain.Services;
 using System;
 
-namespace Domain.ExampleContext.Entities
+namespace Example.Domain.Entities
 {
     /// <summary>Пример доменной сущности</summary>
     public class ExampleEntity

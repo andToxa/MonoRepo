@@ -1,4 +1,4 @@
-﻿namespace Application.ExampleContext.Queries
+﻿namespace Example.Application.Queries
 {
     /// <summary>Пример ответа на запрос</summary>
     public class ExampleQueryResult

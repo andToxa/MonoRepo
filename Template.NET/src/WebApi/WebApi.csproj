@@ -7,7 +7,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Common.NET\src\WebApi.Extensions.Swagger\WebApi.Extensions.Swagger.csproj" />
-      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\Example.Infrastructure\Example.Infrastructure.csproj" />
     </ItemGroup>
 
 
