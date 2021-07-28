@@ -1,29 +1,32 @@
-﻿using MediatR;
+﻿using Common.Application.Events;
+using Example.Domain.Events;
+using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.ExampleContext.Queries
+namespace Example.Application.Events
 {
     /// <inheritdoc />
-    public class ExampleQueryHandler : IRequestHandler<ExampleQuery, ExampleQueryResult>
+    public class ExampleEventHandler : INotificationHandler<Event<ExampleEvent>>
     {
-        private readonly ILogger<ExampleQueryHandler> _logger;
+        private readonly ILogger<ExampleEventHandler> _logger;
 
-        /// <summary>Initializes a new instance of the <see cref="ExampleQueryHandler"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="ExampleEventHandler"/> class.</summary>
         /// <param name="logger"><see cref="ILogger{TCategoryName}"/></param>
-        public ExampleQueryHandler(ILogger<ExampleQueryHandler> logger)
+        public ExampleEventHandler(ILogger<ExampleEventHandler> logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         /// <inheritdoc />
-        public Task<ExampleQueryResult> Handle(ExampleQuery request, CancellationToken cancellationToken)
+        public Task Handle(Event<ExampleEvent> notification, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
             try
             {
+                _logger.LogInformation("{Event}", notification.Data.ToString());
                 throw new NotImplementedException();
             }
             catch (Exception e)

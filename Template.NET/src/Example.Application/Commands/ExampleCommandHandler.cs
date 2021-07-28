@@ -1,12 +1,12 @@
 ﻿using Common.Domain.Services;
-using Domain.ExampleContext.Events;
+using Example.Domain.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Application.ExampleContext.Commands
+namespace Example.Application.Commands
 {
     /// <inheritdoc />
     public class ExampleCommandHandler : IRequestHandler<ExampleCommand>

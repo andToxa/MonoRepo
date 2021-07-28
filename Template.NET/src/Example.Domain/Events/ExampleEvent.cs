@@ -1,4 +1,4 @@
-﻿namespace Domain.ExampleContext.Events
+﻿namespace Example.Domain.Events
 {
     /// <summary>Пример доменного события</summary>
     public class ExampleEvent
