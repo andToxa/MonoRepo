@@ -7,6 +7,6 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="andToxa.StyleCop" Version="1.0.6" />
-        <PackageReference Include="MappingGenerator" Version="2021.7.20" />
+        <PackageReference Include="MappingGenerator" Version="2021.7.22" />
     </ItemGroup>
 </Project>
