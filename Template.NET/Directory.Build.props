@@ -1,12 +1,16 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <LangVersion>9.0</LangVersion>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10.0</LangVersion>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsNotAsErrors>
+            0618 <!--Предупреждение об использовании устаревшего (obsolete) класса/метода/т.п.-->
+        </WarningsNotAsErrors>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="andToxa.StyleCop" Version="1.0.6" />
-        <PackageReference Include="MappingGenerator" Version="2021.7.22" />
+        <PackageReference Include="MappingGenerator" Version="2022.4.44" />
     </ItemGroup>
 </Project>

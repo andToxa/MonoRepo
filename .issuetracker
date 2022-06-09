@@ -1,7 +1,0 @@
-# Integration with Issue Tracker
-#
-# (note that '\' need to be escaped).
-
-[issuetracker "JetBrains Space issues"]
-  regex = "(\\w+)-T-(\\d+)"
-  url = "https://andtoxa.jetbrains.space/p/$1/issues/$2"
