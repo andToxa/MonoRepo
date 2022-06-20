@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Domain", "src\ExampleContext.Domain\ExampleContext.Domain.csproj", "{871CF1E7-8344-4824-8D31-637BDBCA46BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Domain", "src\ExampleContext\ExampleContext.Domain\ExampleContext.Domain.csproj", "{871CF1E7-8344-4824-8D31-637BDBCA46BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Application", "src\ExampleContext.Application\ExampleContext.Application.csproj", "{EF7A5EDE-2A5F-414F-B413-8479CE001165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Application", "src\ExampleContext\ExampleContext.Application\ExampleContext.Application.csproj", "{EF7A5EDE-2A5F-414F-B413-8479CE001165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Infrastructure", "src\ExampleContext.Infrastructure\ExampleContext.Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Infrastructure", "src\ExampleContext\ExampleContext.Infrastructure\ExampleContext.Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
@@ -13,29 +13,29 @@ EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleContext", "ExampleContext", "{D9E81828-AE73-4D0D-9093-888B7739DD95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "src\Common\Common.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Common", "src\SharedKernel\SharedKernel.Common\SharedKernel.Common.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\Common.Application\Common.Application.csproj", "{50757EDE-4A73-416F-91F2-86BA1459A515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Application", "src\SharedKernel\SharedKernel.Application\SharedKernel.Application.csproj", "{50757EDE-4A73-416F-91F2-86BA1459A515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "src\Common.Domain\Common.Domain.csproj", "{066B4D77-746B-4DF8-888A-6B7CFD7352ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Domain", "src\SharedKernel\SharedKernel.Domain\SharedKernel.Domain.csproj", "{066B4D77-746B-4DF8-888A-6B7CFD7352ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "src\Common.Infrastructure\Common.Infrastructure.csproj", "{8D4CEC96-4D36-47EA-A16D-7825096A8344}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Infrastructure", "src\SharedKernel\SharedKernel.Infrastructure\SharedKernel.Infrastructure.csproj", "{8D4CEC96-4D36-47EA-A16D-7825096A8344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Web", "src\Common.Web\Common.Web.csproj", "{4ED4F4D2-B1C2-48BF-9D3B-9E979DA8BBD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.WebAPI", "src\SharedKernel\SharedKernel.WebAPI\SharedKernel.WebAPI.csproj", "{4ED4F4D2-B1C2-48BF-9D3B-9E979DA8BBD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EB0FFDB3-7BA2-4546-BD86-F6D1A8333752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "test\Common.Tests\Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Common.Tests", "test\SharedKernel.Common.Tests\SharedKernel.Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C2718A10-F830-43C1-8034-81535F0C97CE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{C2718A10-F830-43C1-8034-81535F0C97CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.WebAPI", "src\ExampleContext.WebAPI\ExampleContext.WebAPI.csproj", "{70880B8E-8A0C-4C68-92F8-4116619B1BD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.WebAPI", "src\ExampleContext\ExampleContext.WebAPI\ExampleContext.WebAPI.csproj", "{70880B8E-8A0C-4C68-92F8-4116619B1BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain.Tests", "test\Common.Domain.Tests\Common.Domain.Tests.csproj", "{2D5A6472-A786-498B-8CC6-2A874C6BD29E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Domain.Tests", "test\SharedKernel.Domain.Tests\SharedKernel.Domain.Tests.csproj", "{2D5A6472-A786-498B-8CC6-2A874C6BD29E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
