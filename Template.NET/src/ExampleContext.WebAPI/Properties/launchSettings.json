@@ -1,7 +1,7 @@
 ﻿{
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "Infrastructure.Web.Api": {
+    "ExampleContext.WebAPI": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api-docs",
