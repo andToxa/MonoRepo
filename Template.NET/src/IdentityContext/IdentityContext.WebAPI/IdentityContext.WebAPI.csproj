@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\SharedKernel\SharedKernel.WebAPI\SharedKernel.WebAPI.csproj" />
+      <ProjectReference Include="..\IdentityContext.Application\IdentityContext.Application.csproj" />
+      <ProjectReference Include="..\IdentityContext.Infrastructure\IdentityContext.Infrastructure.csproj" />
+    </ItemGroup>
+
+
+</Project>

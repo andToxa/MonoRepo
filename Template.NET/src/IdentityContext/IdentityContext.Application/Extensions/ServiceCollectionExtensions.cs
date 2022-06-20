@@ -1,14 +1,14 @@
-﻿using ExampleContext.Application.Commands;
-using ExampleContext.Application.Events;
-using ExampleContext.Application.Queries;
-using ExampleContext.Domain.Events;
+﻿using IdentityContext.Application.Commands;
+using IdentityContext.Application.Events;
+using IdentityContext.Application.Queries;
+using IdentityContext.Domain.Events;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SharedKernel.Application.Events;
 using SharedKernel.Application.Extensions;
 
-namespace ExampleContext.Application.Extensions
+namespace IdentityContext.Application.Extensions
 {
     /// <summary>Класс-расширение для <see cref="IServiceCollection"/></summary>
     public static class ServiceCollectionExtensions

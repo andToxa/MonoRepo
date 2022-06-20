@@ -13,7 +13,7 @@ namespace SharedKernel.Application.Extensions
         /// <param name="services"><see cref="IServiceCollection"/></param>
         /// <param name="configuration"><see cref="IConfiguration"/></param>
         /// <returns><seealso cref="IServiceCollection"/></returns>
-        public static IServiceCollection AddApplicationCommon(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddSharedKernelApplication(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddMediatR(services.GetType());
 

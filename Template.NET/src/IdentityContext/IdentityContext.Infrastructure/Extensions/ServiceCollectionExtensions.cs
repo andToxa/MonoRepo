@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using SharedKernel.Infrastructure.Extensions;
 
-namespace ExampleContext.Infrastructure.Extensions
+namespace IdentityContext.Infrastructure.Extensions
 {
     /// <summary>Класс-расширение для <see cref="IServiceCollection"/></summary>
     public static class ServiceCollectionExtensions
