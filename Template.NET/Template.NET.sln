@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Domain", "src\ExampleContext\ExampleContext.Domain\ExampleContext.Domain.csproj", "{871CF1E7-8344-4824-8D31-637BDBCA46BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.Domain", "src\Notifications\Notifications.Domain\Notifications.Domain.csproj", "{871CF1E7-8344-4824-8D31-637BDBCA46BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Application", "src\ExampleContext\ExampleContext.Application\ExampleContext.Application.csproj", "{EF7A5EDE-2A5F-414F-B413-8479CE001165}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.Application", "src\Notifications\Notifications.Application\Notifications.Application.csproj", "{EF7A5EDE-2A5F-414F-B413-8479CE001165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.Infrastructure", "src\ExampleContext\ExampleContext.Infrastructure\ExampleContext.Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.Infrastructure", "src\Notifications\Notifications.Infrastructure\Notifications.Infrastructure.csproj", "{89A2899C-89DC-432B-B17E-3375D53829E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
@@ -13,39 +13,41 @@ EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExampleContext", "ExampleContext", "{D9E81828-AE73-4D0D-9093-888B7739DD95}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{D9E81828-AE73-4D0D-9093-888B7739DD95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Common", "src\SharedKernel\SharedKernel.Common\SharedKernel.Common.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Utils", "src\Common\Common.Utils\Common.Utils.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Application", "src\SharedKernel\SharedKernel.Application\SharedKernel.Application.csproj", "{50757EDE-4A73-416F-91F2-86BA1459A515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\Common\Common.Application\Common.Application.csproj", "{50757EDE-4A73-416F-91F2-86BA1459A515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Domain", "src\SharedKernel\SharedKernel.Domain\SharedKernel.Domain.csproj", "{066B4D77-746B-4DF8-888A-6B7CFD7352ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain", "src\Common\Common.Domain\Common.Domain.csproj", "{066B4D77-746B-4DF8-888A-6B7CFD7352ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Infrastructure", "src\SharedKernel\SharedKernel.Infrastructure\SharedKernel.Infrastructure.csproj", "{8D4CEC96-4D36-47EA-A16D-7825096A8344}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Infrastructure", "src\Common\Common.Infrastructure\Common.Infrastructure.csproj", "{8D4CEC96-4D36-47EA-A16D-7825096A8344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.WebAPI", "src\SharedKernel\SharedKernel.WebAPI\SharedKernel.WebAPI.csproj", "{4ED4F4D2-B1C2-48BF-9D3B-9E979DA8BBD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.WebAPI", "src\Common\Common.WebAPI\Common.WebAPI.csproj", "{4ED4F4D2-B1C2-48BF-9D3B-9E979DA8BBD3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EB0FFDB3-7BA2-4546-BD86-F6D1A8333752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Common.Tests", "test\SharedKernel.Common.Tests\SharedKernel.Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "test\Common.Tests\Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{C2718A10-F830-43C1-8034-81535F0C97CE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C2718A10-F830-43C1-8034-81535F0C97CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleContext.WebAPI", "src\ExampleContext\ExampleContext.WebAPI\ExampleContext.WebAPI.csproj", "{70880B8E-8A0C-4C68-92F8-4116619B1BD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.WebAPI", "src\Notifications\Notifications.WebAPI\Notifications.WebAPI.csproj", "{70880B8E-8A0C-4C68-92F8-4116619B1BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.Domain.Tests", "test\SharedKernel.Domain.Tests\SharedKernel.Domain.Tests.csproj", "{2D5A6472-A786-498B-8CC6-2A874C6BD29E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{C446D84B-C00F-4407-8A01-3203FE68AC3F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityContext", "IdentityContext", "{C446D84B-C00F-4407-8A01-3203FE68AC3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain", "src\Identity\Identity.Domain\Identity.Domain.csproj", "{D8384C43-14DC-4B87-88DD-D9983BCF3A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityContext.Domain", "src\IdentityContext\IdentityContext.Domain\IdentityContext.Domain.csproj", "{D8384C43-14DC-4B87-88DD-D9983BCF3A4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application", "src\Identity\Identity.Application\Identity.Application.csproj", "{BE994DFF-D77B-4482-9FB6-E02A19B7D301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityContext.Application", "src\IdentityContext\IdentityContext.Application\IdentityContext.Application.csproj", "{BE994DFF-D77B-4482-9FB6-E02A19B7D301}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "src\Identity\Identity.Infrastructure\Identity.Infrastructure.csproj", "{98AE590C-2628-4325-A26C-8633037A4C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityContext.Infrastructure", "src\IdentityContext\IdentityContext.Infrastructure\IdentityContext.Infrastructure.csproj", "{98AE590C-2628-4325-A26C-8633037A4C4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.WebAPI", "src\Identity\Identity.WebAPI\Identity.WebAPI.csproj", "{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityContext.WebAPI", "src\IdentityContext\IdentityContext.WebAPI\IdentityContext.WebAPI.csproj", "{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain.Tests", "test\Common.Domain.Tests\Common.Domain.Tests.csproj", "{EF295BF5-810E-4D48-AA5F-51A25EC70F09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application.Events", "src\Identity\Identity.Application.Events\Identity.Application.Events.csproj", "{EE5DCACB-7571-4E28-B53D-00C49E389D98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,10 +95,6 @@ Global
 		{70880B8E-8A0C-4C68-92F8-4116619B1BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70880B8E-8A0C-4C68-92F8-4116619B1BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70880B8E-8A0C-4C68-92F8-4116619B1BD0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D5A6472-A786-498B-8CC6-2A874C6BD29E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D5A6472-A786-498B-8CC6-2A874C6BD29E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D5A6472-A786-498B-8CC6-2A874C6BD29E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D5A6472-A786-498B-8CC6-2A874C6BD29E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8384C43-14DC-4B87-88DD-D9983BCF3A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8384C43-14DC-4B87-88DD-D9983BCF3A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8384C43-14DC-4B87-88DD-D9983BCF3A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -113,6 +111,14 @@ Global
 		{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF295BF5-810E-4D48-AA5F-51A25EC70F09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF295BF5-810E-4D48-AA5F-51A25EC70F09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF295BF5-810E-4D48-AA5F-51A25EC70F09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF295BF5-810E-4D48-AA5F-51A25EC70F09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F} = {5FACB0C7-3546-43A6-BD36-098463DF52E4}
@@ -127,12 +133,13 @@ Global
 		{4ED4F4D2-B1C2-48BF-9D3B-9E979DA8BBD3} = {3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F}
 		{C2718A10-F830-43C1-8034-81535F0C97CE} = {EB0FFDB3-7BA2-4546-BD86-F6D1A8333752}
 		{A50F9D2C-2A5A-4280-9767-2EF9C773A308} = {C2718A10-F830-43C1-8034-81535F0C97CE}
-		{2D5A6472-A786-498B-8CC6-2A874C6BD29E} = {C2718A10-F830-43C1-8034-81535F0C97CE}
 		{70880B8E-8A0C-4C68-92F8-4116619B1BD0} = {D9E81828-AE73-4D0D-9093-888B7739DD95}
 		{C446D84B-C00F-4407-8A01-3203FE68AC3F} = {5FACB0C7-3546-43A6-BD36-098463DF52E4}
 		{D8384C43-14DC-4B87-88DD-D9983BCF3A4A} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
 		{BE994DFF-D77B-4482-9FB6-E02A19B7D301} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
 		{98AE590C-2628-4325-A26C-8633037A4C4C} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
 		{DDB313B6-93F0-4CB4-8C0F-0034595A98B9} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
+		{EF295BF5-810E-4D48-AA5F-51A25EC70F09} = {C2718A10-F830-43C1-8034-81535F0C97CE}
+		{EE5DCACB-7571-4E28-B53D-00C49E389D98} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
 	EndGlobalSection
 EndGlobal
