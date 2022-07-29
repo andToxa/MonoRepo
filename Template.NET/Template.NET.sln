@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3F8396
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{D9E81828-AE73-4D0D-9093-888B7739DD95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Utils", "src\Common\Common.Utils\Common.Utils.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "src\Common\Common\Common.csproj", "{7B12CF5E-6A22-483E-A658-4FCBD445279D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Application", "src\Common\Common.Application\Common.Application.csproj", "{50757EDE-4A73-416F-91F2-86BA1459A515}"
 EndProject

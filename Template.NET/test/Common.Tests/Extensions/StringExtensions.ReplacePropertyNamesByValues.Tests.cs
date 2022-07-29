@@ -1,4 +1,4 @@
-﻿using Common.Utils.Extensions;
+﻿using Common.Extensions;
 using Xunit;
 
 namespace Common.Tests.Extensions

@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Common.Utils.Extensions
+namespace Common.Extensions
 {
     /// <summary>Методы-расширения для <see cref="string"/></summary>
     public static class StringExtensions
