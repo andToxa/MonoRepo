@@ -17,7 +17,7 @@ builder.Services.AddHealthChecks();
 
 builder.Services
     .AddApplication(builder.Configuration)
-    .AddInfrastructure(builder.Configuration);
+    .AddInfrastructure(builder.Configuration, builder.Environment);
 
 builder.Services
     .AddControllers()
@@ -28,6 +28,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerExtension(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseMigrations();
 
 if (app.Environment.IsDevelopment())
 {

@@ -7,13 +7,13 @@ namespace Common.Domain.Tests.Entities
     public class TestEntity : IEntity<TestEntity>
     {
         /// <summary>Initializes a new instance of the <see cref="TestEntity"/> class.</summary>
-        /// <param name="id"><see cref="EntityId{T}"/></param>
-        public TestEntity(EntityId<TestEntity> id)
+        /// <param name="id"><see cref="Id{T}"/></param>
+        public TestEntity(Id<TestEntity> id)
         {
             Id = id;
         }
 
         /// <inheritdoc />
-        public EntityId<TestEntity> Id { get; }
+        public Id<TestEntity> Id { get; }
     }
 }

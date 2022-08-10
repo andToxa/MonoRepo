@@ -13,8 +13,8 @@ namespace Common.Domain.Tests.Entities
         [Fact]
         public void Test1()
         {
-            var entityOne = new TestEntity(EntityId<TestEntity>.New());
-            var entityTwo = new TestEntity(EntityId<TestEntity>.New());
+            var entityOne = new TestEntity(Id<TestEntity>.New());
+            var entityTwo = new TestEntity(Id<TestEntity>.New());
             Assert.NotEqual(entityOne.Id, entityTwo.Id);
         }
     }

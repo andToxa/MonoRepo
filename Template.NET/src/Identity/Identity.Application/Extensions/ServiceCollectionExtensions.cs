@@ -1,4 +1,7 @@
 ﻿using Common.Application.Extensions;
+using Identity.Application.Commands;
+using Identity.Application.Events;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,7 +19,7 @@ namespace Identity.Application.Extensions
             services.AddCommonApplication(configuration);
 
             // обработчики команд
-            /*services.AddScoped<IRequestHandler<ExampleCommand, Unit>, ExampleCommandHandler>();*/
+            services.AddScoped<IRequestHandler<UserRegisterCommand, UserRegisteredEvent>, UserRegisterCommand.Handler>();
 
             // обработчики запросов
             /*services.AddScoped<IRequestHandler<ExampleQuery, ExampleQueryResult>, ExampleQueryHandler>();*/

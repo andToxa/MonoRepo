@@ -7,6 +7,6 @@ namespace Common.Domain.Entities
     public interface IEntity<T>
     {
         /// <summary>Идентификатор сущности</summary>
-        public EntityId<T> Id { get; }
+        public Id<T> Id { get; }
     }
 }
