@@ -26,7 +26,20 @@ public class UserRepository : IUserRepository
     public UserRepository(DatabaseContext databaseContext, UserManager<UserModel> userManager)
     {
         _databaseContext = databaseContext ?? throw new ArgumentNullException(nameof(databaseContext));
+
         _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+
+        _userManager.Options.Password = new PasswordOptions
+        {
+            RequireDigit = UserPassword.Options.RequireDigit,
+            RequiredLength = UserPassword.Options.RequiredLength,
+            RequireLowercase = UserPassword.Options.RequireLowercase,
+            RequireUppercase = UserPassword.Options.RequireUppercase,
+            RequiredUniqueChars = UserPassword.Options.RequiredUniqueChars,
+            RequireNonAlphanumeric = UserPassword.Options.RequireNonAlphanumeric,
+        };
+
+        // todo _userManager.Options.User... и т.п.
     }
 
     /// <inheritdoc cref="IUserRepository.RegisterAsync"/>

@@ -58,4 +58,40 @@ public record UserPassword
     {
         return _password;
     }
+
+    /// <summary>
+    /// Параметры пароля пользователя
+    /// </summary>
+    public static class Options
+    {
+        /// <summary>
+        /// Требуется наличие цифр
+        /// </summary>
+        public const bool RequireDigit = true;
+
+        /// <summary>
+        /// Требуемая минимальная длина пароля
+        /// </summary>
+        public const int RequiredLength = 8;
+
+        /// <summary>
+        /// Требуется наличие букв в нижнем регистре
+        /// </summary>
+        public const bool RequireLowercase = true;
+
+        /// <summary>
+        /// Требуется наличие букв в верхнем регистре
+        /// </summary>
+        public const bool RequireUppercase = true;
+
+        /// <summary>
+        /// Требуемое количество уникальных символов
+        /// </summary>
+        public const int RequiredUniqueChars = 1;
+
+        /// <summary>
+        /// Требуется наличие символов
+        /// </summary>
+        public const bool RequireNonAlphanumeric = true;
+    }
 }
