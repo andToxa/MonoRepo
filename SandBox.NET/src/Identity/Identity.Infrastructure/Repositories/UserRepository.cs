@@ -30,7 +30,7 @@ public class UserRepository : IUserRepository
     }
 
     /// <inheritdoc cref="IUserRepository.RegisterAsync"/>
-    public async Task<User> RegisterAsync(string userName, string userPassword)
+    public async Task<User> RegisterAsync(UserName userName, UserPassword userPassword)
     {
         if (await _databaseContext.Users.AnyAsync(user => user.UserName == userName))
         {
@@ -43,8 +43,8 @@ public class UserRepository : IUserRepository
         if (result.Succeeded)
         {
             var id = Id<User>.New(userModel.Id);
-            var name = new UserName(userModel.UserName);
-            var user = new User(id, name);
+            var name = UserName.New(userModel.UserName);
+            var user = User.New(id, name);
             return user;
         }
 

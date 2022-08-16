@@ -3,14 +3,14 @@
 /// <summary>
 /// Событие "Пользователь зарегистрирован"
 /// </summary>
-public record UserRegisteredEvent
+public record UserSignedUpEvent
 {
     /// <summary>
-    /// Конструктор <see cref="UserRegisteredEvent"/>
+    /// Конструктор <see cref="UserSignedUpEvent"/>
     /// </summary>
     /// <param name="id"><see cref="Id"/></param>
     /// <param name="userName"><see cref="UserName"/></param>
-    public UserRegisteredEvent(string id, string userName)
+    public UserSignedUpEvent(string id, string userName)
     {
         Id = id;
         UserName = userName;

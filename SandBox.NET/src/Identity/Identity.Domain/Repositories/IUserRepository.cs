@@ -1,4 +1,5 @@
 ﻿using Identity.Domain.Entities;
+using Identity.Domain.ValueObjects;
 using System.Threading.Tasks;
 
 namespace Identity.Domain.Repositories;
@@ -11,8 +12,8 @@ public interface IUserRepository
     /// <summary>
     /// Регистрация пользователя
     /// </summary>
-    /// <param name="userName">Имя пользователя</param>
-    /// <param name="userPassword">Пароль пользователя</param>
+    /// <param name="userName"><see cref="UserName"/></param>
+    /// <param name="userPassword"><see cref="UserPassword"/></param>
     /// <returns><see cref="User"/></returns>
-    public Task<User> RegisterAsync(string userName, string userPassword);
+    public Task<User> RegisterAsync(UserName userName, UserPassword userPassword);
 }
