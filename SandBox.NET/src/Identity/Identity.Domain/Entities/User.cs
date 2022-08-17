@@ -9,24 +9,19 @@ namespace Identity.Domain.Entities;
 /// </summary>
 public class User : IEntity<User>
 {
-    /// <summary>
-    /// Конструктор <see cref="User"/>
-    /// </summary>
-    /// <param name="id"><see cref="Id{User}"/></param>
-    /// <param name="userName"><see cref="UserName"/></param>
-    public User(Id<User> id, UserName userName)
+    private User(Id<User> id, UserName name)
     {
         Id = id;
-        UserName = userName;
+        Name = name;
     }
 
     /// <inheritdoc />
     public Id<User> Id { get; }
 
     /// <summary>
-    /// <see cref="Identity.Domain.ValueObjects.UserName"/>
+    /// <see cref="Name"/>
     /// </summary>
-    public UserName UserName { get; }
+    public UserName Name { get; }
 
     /// <summary>
     /// <see cref="Common.Domain.ValueObjects.Email"/>
@@ -37,4 +32,15 @@ public class User : IEntity<User>
     /// <see cref="Common.Domain.ValueObjects.Phone"/>
     /// </summary>
     public Phone? Phone { get; }
+
+    /// <summary>
+    /// Создание <see cref="User"/>
+    /// </summary>
+    /// <param name="id"><see cref="Id{User}"/></param>
+    /// <param name="name"><see cref="Name"/></param>
+    /// <returns><see cref="User"/></returns>
+    public static User New(Id<User> id, UserName name)
+    {
+        return new User(id, name);
+    }
 }

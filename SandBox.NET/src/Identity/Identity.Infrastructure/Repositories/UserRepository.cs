@@ -26,11 +26,24 @@ public class UserRepository : IUserRepository
     public UserRepository(DatabaseContext databaseContext, UserManager<UserModel> userManager)
     {
         _databaseContext = databaseContext ?? throw new ArgumentNullException(nameof(databaseContext));
+
         _userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+
+        _userManager.Options.Password = new PasswordOptions
+        {
+            RequireDigit = UserPassword.Options.RequireDigit,
+            RequiredLength = UserPassword.Options.RequiredLength,
+            RequireLowercase = UserPassword.Options.RequireLowercase,
+            RequireUppercase = UserPassword.Options.RequireUppercase,
+            RequiredUniqueChars = UserPassword.Options.RequiredUniqueChars,
+            RequireNonAlphanumeric = UserPassword.Options.RequireNonAlphanumeric,
+        };
+
+        // todo _userManager.Options.User... и т.п.
     }
 
     /// <inheritdoc cref="IUserRepository.RegisterAsync"/>
-    public async Task<User> RegisterAsync(string userName, string userPassword)
+    public async Task<User> RegisterAsync(UserName userName, UserPassword userPassword)
     {
         if (await _databaseContext.Users.AnyAsync(user => user.UserName == userName))
         {
@@ -43,8 +56,8 @@ public class UserRepository : IUserRepository
         if (result.Succeeded)
         {
             var id = Id<User>.New(userModel.Id);
-            var name = new UserName(userModel.UserName);
-            var user = new User(id, name);
+            var name = UserName.New(userModel.UserName);
+            var user = User.New(id, name);
             return user;
         }
 

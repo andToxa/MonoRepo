@@ -9,6 +9,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
+	Directory.Build.props = Directory.Build.props
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"
@@ -29,7 +30,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.WebAPI", "src\Common
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EB0FFDB3-7BA2-4546-BD86-F6D1A8333752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "test\Common.Tests\Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Tests", "test\Common\Common.Tests\Common.Tests.csproj", "{A50F9D2C-2A5A-4280-9767-2EF9C773A308}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C2718A10-F830-43C1-8034-81535F0C97CE}"
 EndProject
@@ -45,9 +46,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.WebAPI", "src\Identity\Identity.WebAPI\Identity.WebAPI.csproj", "{DDB313B6-93F0-4CB4-8C0F-0034595A98B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain.Tests", "test\Common.Domain.Tests\Common.Domain.Tests.csproj", "{EF295BF5-810E-4D48-AA5F-51A25EC70F09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Domain.Tests", "test\Common\Common.Domain.Tests\Common.Domain.Tests.csproj", "{EF295BF5-810E-4D48-AA5F-51A25EC70F09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Application.Events", "src\Identity\Identity.Application.Events\Identity.Application.Events.csproj", "{EE5DCACB-7571-4E28-B53D-00C49E389D98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{00F8890E-5DA0-461D-B790-0F9415C27DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Domain.Tests", "test\Identity\Identity.Domain.Tests\Identity.Domain.Tests.csproj", "{ECEE5D31-37A6-48E9-9405-C66CCBD23A12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +124,10 @@ Global
 		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE5DCACB-7571-4E28-B53D-00C49E389D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECEE5D31-37A6-48E9-9405-C66CCBD23A12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECEE5D31-37A6-48E9-9405-C66CCBD23A12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECEE5D31-37A6-48E9-9405-C66CCBD23A12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECEE5D31-37A6-48E9-9405-C66CCBD23A12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F8396CE-7837-4B25-BDD5-9FB05E0FBF0F} = {5FACB0C7-3546-43A6-BD36-098463DF52E4}
@@ -141,5 +150,7 @@ Global
 		{DDB313B6-93F0-4CB4-8C0F-0034595A98B9} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
 		{EF295BF5-810E-4D48-AA5F-51A25EC70F09} = {C2718A10-F830-43C1-8034-81535F0C97CE}
 		{EE5DCACB-7571-4E28-B53D-00C49E389D98} = {C446D84B-C00F-4407-8A01-3203FE68AC3F}
+		{00F8890E-5DA0-461D-B790-0F9415C27DAE} = {EB0FFDB3-7BA2-4546-BD86-F6D1A8333752}
+		{ECEE5D31-37A6-48E9-9405-C66CCBD23A12} = {00F8890E-5DA0-461D-B790-0F9415C27DAE}
 	EndGlobalSection
 EndGlobal

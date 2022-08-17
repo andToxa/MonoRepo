@@ -19,7 +19,7 @@ namespace Identity.Application.Extensions
             services.AddCommonApplication(configuration);
 
             // обработчики команд
-            services.AddScoped<IRequestHandler<UserRegisterCommand, UserRegisteredEvent>, UserRegisterCommand.Handler>();
+            services.AddScoped<IRequestHandler<UserSignUpCommand, UserSignedUpEvent>, UserSignUpCommand.Handler>();
 
             // обработчики запросов
             /*services.AddScoped<IRequestHandler<ExampleQuery, ExampleQueryResult>, ExampleQueryHandler>();*/

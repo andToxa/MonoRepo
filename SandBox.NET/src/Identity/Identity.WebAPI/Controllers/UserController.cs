@@ -13,10 +13,10 @@ public class UserController : BaseController
     /// <summary>
     /// Регистрация пользователя
     /// </summary>
-    /// <param name="command"><see cref="UserRegisterCommand"/></param>
+    /// <param name="command"><see cref="UserSignUpCommand"/></param>
     /// <returns><see cref="Id{T}"/></returns>
     [HttpPost("register")]
-    public async Task<ActionResult<UserRegisteredEvent>> RegisterAsync(UserRegisterCommand command)
+    public async Task<ActionResult<UserSignedUpEvent>> RegisterAsync(UserSignUpCommand command)
     {
         return await Mediator.Send(command);
     }
