@@ -20,12 +20,12 @@ public record UserSignUpCommand : IRequest<UserSignedUpEvent>
     /// <param name="password"><see cref="Password"/></param>
     public UserSignUpCommand(string name, string password)
     {
-        Name = Domain.ValueObjects.UserName.IsValid(name)
+        Name = UserName.IsValid(name)
             ? name
-            : throw new ArgumentException(Domain.ValueObjects.UserName.UserNameIncorrectErrorMessage, nameof(name));
-        Password = UserPassword.IsValid(password)
+            : throw new ArgumentException(UserName.UserNameIncorrectErrorMessage, nameof(name));
+        Password = UserPassword.IsValid(password, out var errors)
             ? password
-            : throw new ArgumentException(UserPassword.UserPasswordIncorrectErrorMessage, nameof(password));
+            : throw new ArgumentException(UserPassword.UserPasswordIncorrectErrorMessage, nameof(password)) { Data = { { "Errors", errors } } };
     }
 
     /// <summary>
