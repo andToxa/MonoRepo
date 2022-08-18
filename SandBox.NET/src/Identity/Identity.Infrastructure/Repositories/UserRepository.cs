@@ -42,8 +42,8 @@ public class UserRepository : IUserRepository
         // todo _userManager.Options.User... и т.п.
     }
 
-    /// <inheritdoc cref="IUserRepository.RegisterAsync"/>
-    public async Task<User> RegisterAsync(UserName userName, UserPassword userPassword)
+    /// <inheritdoc cref="IUserRepository.RegisterByUserNameAsync"/>
+    public async Task<User> RegisterByUserNameAsync(UserName userName, UserPassword userPassword)
     {
         if (await _databaseContext.Users.AnyAsync(user => user.UserName == userName))
         {
@@ -68,5 +68,23 @@ public class UserRepository : IUserRepository
         }
 
         throw domainException;
+    }
+
+    /// <inheritdoc />
+    public async Task<User> GetByUserNameAsync(UserName userName, UserPassword userPassword)
+    {
+        var userModel = await _databaseContext.Users.FirstOrDefaultAsync(user => user.UserName == userName);
+
+        if (userModel is null)
+        {
+            throw new DomainException("Пользователь не существует");
+        }
+
+        if (!await _userManager.CheckPasswordAsync(userModel, userPassword))
+        {
+            throw new DomainException("Пароль пользователя некорректен");
+        }
+
+        return User.New(Id<User>.New(userModel.Id), UserName.New(userModel.UserName));
     }
 }

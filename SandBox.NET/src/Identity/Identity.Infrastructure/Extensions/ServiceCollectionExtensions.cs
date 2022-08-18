@@ -1,5 +1,6 @@
 ﻿using Common.Infrastructure.Extensions;
 using Identity.Domain.Repositories;
+using Identity.Domain.Services;
 using Identity.Infrastructure.Database;
 using Identity.Infrastructure.Database.Models;
 using Identity.Infrastructure.Repositories;

@@ -1,5 +1,5 @@
-﻿using Identity.Application.Events;
-using Identity.Domain.Repositories;
+﻿using Identity.Domain.Repositories;
+using Identity.Domain.Services;
 using Identity.Domain.ValueObjects;
 using MediatR;
 using System;
@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 namespace Identity.Application.Commands;
 
 /// <summary>
-/// Команда регистрации пользователя
+/// Команда аутентификации пользователя
 /// </summary>
-public record UserSignUpCommand : IRequest<UserSignedUpEvent>
+public record UserSignInCommand : IRequest<string>
 {
     /// <summary>
-    /// Конструктор <see cref="UserSignUpCommand"/>
+    /// Конструктор <see cref="UserSignInCommand"/>
     /// </summary>
     /// <param name="name"><see cref="Name"/></param>
     /// <param name="password"><see cref="Password"/></param>
-    public UserSignUpCommand(string name, string password)
+    public UserSignInCommand(string name, string password)
     {
         Name = name ?? throw new ArgumentNullException(nameof(name));
         Password = password ?? throw new ArgumentNullException(nameof(password));
@@ -35,27 +35,29 @@ public record UserSignUpCommand : IRequest<UserSignedUpEvent>
     public string Password { get; }
 
     /// <inheritdoc />
-    public class Handler : IRequestHandler<UserSignUpCommand, UserSignedUpEvent>
+    public class Handler : IRequestHandler<UserSignInCommand, string>
     {
         private readonly IUserRepository _userRepository;
+        private readonly IJwtGenerator _jwtGenerator;
 
         /// <summary>
         /// Конструктор <see cref="Handler"/>
         /// </summary>
         /// <param name="userRepository"><see cref="IUserRepository"/></param>
-        public Handler(IUserRepository userRepository)
+        /// <param name="jwtGenerator"><see cref="IJwtGenerator"/></param>
+        public Handler(IUserRepository userRepository, IJwtGenerator jwtGenerator)
         {
             _userRepository = userRepository ?? throw new ArgumentNullException(nameof(userRepository));
+            _jwtGenerator = jwtGenerator ?? throw new ArgumentNullException(nameof(jwtGenerator));
         }
 
         /// <inheritdoc />
-        public async Task<UserSignedUpEvent> Handle(UserSignUpCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(UserSignInCommand request, CancellationToken cancellationToken)
         {
             var userName = UserName.New(request.Name);
             var userPassword = UserPassword.New(request.Password);
-            var user = await _userRepository.RegisterByUserNameAsync(userName, userPassword);
-            var userRegisteredEvent = new UserSignedUpEvent(id: user.Id, userName: user.Name);
-            return userRegisteredEvent;
+            var user = await _userRepository.GetByUserNameAsync(userName, userPassword);
+            return _jwtGenerator.CreateToken(user);
         }
     }
 }
