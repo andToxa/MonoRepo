@@ -1,4 +1,5 @@
-﻿using Identity.Infrastructure.Database.Models;
+﻿using Identity.Domain.Entities;
+using Identity.Domain.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -7,40 +8,39 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Identity.Infrastructure.Services
+namespace Identity.Infrastructure.Services;
+
+/// <inheritdoc />
+public class JwtGenerator : IJwtGenerator
 {
-    /// <inheritdoc />
-    public class JwtGenerator : IJwtGenerator
+    private readonly SymmetricSecurityKey _key;
+
+    /// <summary>
+    /// Конструктор <see cref="JwtGenerator"/>
+    /// </summary>
+    /// <param name="config"><see cref="IConfiguration"/></param>
+    public JwtGenerator(IConfiguration config)
     {
-        private readonly SymmetricSecurityKey _key;
+        _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"] ?? "4C62D52D-D788-4940-8925-4A52111C0C85")); // todo переделать
+    }
 
-        /// <summary>
-        /// Конструктор <see cref="JwtGenerator"/>
-        /// </summary>
-        /// <param name="config"><see cref="IConfiguration"/></param>
-        public JwtGenerator(IConfiguration config)
+    /// <inheritdoc />
+    public string CreateToken(User user) // todo возвращать VO
+    {
+        var claims = new List<Claim> { new Claim(JwtRegisteredClaimNames.NameId, user.Name) };
+
+        var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
+
+        var tokenDescriptor = new SecurityTokenDescriptor
         {
-            _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("string.Empty")); // todo Encoding.UTF8.GetBytes(config["TokenKey"])
-        }
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddDays(7),
+            SigningCredentials = credentials
+        };
+        var tokenHandler = new JwtSecurityTokenHandler();
 
-        /// <inheritdoc />
-        public string CreateToken(UserModel userModel)
-        {
-            var claims = new List<Claim> { new Claim(JwtRegisteredClaimNames.NameId, userModel.UserName) };
+        var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512Signature);
-
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(7), // todo
-                SigningCredentials = credentials
-            };
-            var tokenHandler = new JwtSecurityTokenHandler();
-
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-
-            return tokenHandler.WriteToken(token);
-        }
+        return tokenHandler.WriteToken(token);
     }
 }
