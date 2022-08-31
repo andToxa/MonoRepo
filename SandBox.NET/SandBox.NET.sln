@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionF
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
 	Directory.Build.props = Directory.Build.props
+	CHANGELOG.md = CHANGELOG.md
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"
@@ -57,7 +58,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{60D268BE-11F8-431E-BDE9-B4F6EE95B509}"
 	ProjectSection(SolutionItems) = preProject
 		src\Identity\README.md = src\Identity\README.md
-		src\Identity\CHANGELOG.md = src\Identity\CHANGELOG.md
 	EndProjectSection
 EndProject
 Global
