@@ -19,8 +19,8 @@ public static class ServiceCollectionExtensions
         services.AddCommonApplication(configuration);
 
         // обработчики команд
-        services.AddScoped<IRequestHandler<UserSignUpCommand, UserSignedUpEvent>, UserSignUpCommand.Handler>();
-        services.AddScoped<IRequestHandler<UserSignInCommand, string>, UserSignInCommand.Handler>();
+        services.AddScoped<IRequestHandler<UserSignUpCommand, UserSignedUpEvent>, UserSignUpCommandHandler>();
+        services.AddScoped<IRequestHandler<UserSignInCommand, string>, UserSignInCommandHandler>();
 
         // обработчики запросов
         /*services.AddScoped<IRequestHandler<ExampleQuery, ExampleQueryResult>, ExampleQueryHandler>();*/

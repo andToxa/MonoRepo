@@ -7,6 +7,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Common\Common.WebAPI\Common.WebAPI.csproj" />
+      <ProjectReference Include="..\Identity.Application.Abstractions\Identity.Application.Abstractions.csproj" />
       <ProjectReference Include="..\Identity.Application\Identity.Application.csproj" />
       <ProjectReference Include="..\Identity.Infrastructure\Identity.Infrastructure.csproj" />
     </ItemGroup>
