@@ -1,13 +1,13 @@
-﻿using Identity.Application.Commands;
+﻿using Identity.Application.Abstractions;
+using Identity.Application.Commands;
 using Identity.Application.Events;
-using Identity.Application.Queries;
 
 namespace Identity.WebAPI.Client;
 
 /// <summary>
 /// Клиент Identity.Application
 /// </summary>
-public class Client : IIdentityCommands, IIdentityQueries
+public class IdentityApplicationClient : IIdentityApplication
 {
     /// <inheritdoc />
     public Task<UserSignedUpEvent> SignUpAsync(UserSignUpCommand command)

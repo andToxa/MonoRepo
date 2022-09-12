@@ -1,15 +1,15 @@
 ﻿using Common.Domain.ValueObjects;
 using Common.WebAPI.Controllers;
+using Identity.Application.Abstractions;
 using Identity.Application.Commands;
 using Identity.Application.Events;
-using Identity.Application.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace Identity.WebAPI.Controllers;
 
 /// <inheritdoc cref="BaseController"/>
-public class UserController : BaseController, IIdentityCommands, IIdentityQueries
+public class UserController : BaseController, IIdentityApplication
 {
     /// <summary>
     /// Регистрация пользователя
