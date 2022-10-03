@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Common.Domain.ValueObjects;
 
 /// <summary>Идентификатор сущности</summary>
 /// <typeparam name="T">Тип Сущности</typeparam>
+[JsonConverter(typeof(IdJsonConverterFactory))]
 public record Id<T>
 {
     private readonly Guid _guid;

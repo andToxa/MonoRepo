@@ -1,7 +1,8 @@
 ﻿using Common.Domain.ValueObjects;
+using Identity.Application.Commands;
 using Identity.Application.Events;
 
-namespace Identity.Application.Commands;
+namespace Identity.Application.Abstractions;
 
 /// <summary>
 /// Доступные команды Identity.Application

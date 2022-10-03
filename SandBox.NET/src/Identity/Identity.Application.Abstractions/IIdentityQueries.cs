@@ -1,4 +1,4 @@
-﻿namespace Identity.Application.Queries;
+﻿namespace Identity.Application.Abstractions;
 
 /// <summary>
 /// Доступные запросы к Identity.Application

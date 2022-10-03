@@ -1,7 +1,4 @@
-﻿using Identity.Application.Commands;
-using Identity.Application.Queries;
-
-namespace Identity.Application.Abstractions;
+﻿namespace Identity.Application.Abstractions;
 
 /// <summary>
 /// Интерфейс Identity.Application
