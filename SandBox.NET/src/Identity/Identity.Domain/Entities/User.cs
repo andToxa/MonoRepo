@@ -1,4 +1,5 @@
 ﻿using Common.Domain.Entities;
+using Common.Domain.Entities.Abstractions;
 using Common.Domain.ValueObjects;
 using Identity.Domain.ValueObjects;
 

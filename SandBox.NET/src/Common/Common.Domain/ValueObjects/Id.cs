@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Domain.ValueObjects.Converters;
+using System;
 using System.Text.Json.Serialization;
 
 namespace Common.Domain.ValueObjects;
@@ -10,34 +11,21 @@ public record Id<T>
 {
     private readonly Guid _guid;
 
-    private Id(Guid guid)
+    /// <summary>
+    /// Конструктор <see cref="Id{T}"/>
+    /// </summary>
+    public Id()
     {
-        _guid = guid;
-    }
-
-    /// <summary>Создание нового идентификатора сущности</summary>
-    /// <returns><see cref="Id{T}"/></returns>
-    public static Id<T> New()
-    {
-        return new Id<T>(Guid.NewGuid());
-    }
-
-    /// <summary>Создание нового идентификатора сущности</summary>
-    /// <param name="guid"><see cref="Guid"/></param>
-    /// <returns><see cref="Id{T}"/></returns>
-    public static Id<T> New(Guid guid)
-    {
-        return new Id<T>(guid);
+        _guid = Guid.NewGuid();
     }
 
     /// <summary>
-    /// Неявное преобразование к <see cref="string"/>
+    /// Конструктор <see cref="Id{T}"/>
     /// </summary>
-    /// <param name="id"><see cref="Id{T}"/></param>
-    /// <returns><see cref="string"/></returns>
-    public static implicit operator string(Id<T> id)
+    /// <param name="guid"><see cref="Guid"/></param>
+    public Id(Guid guid)
     {
-        return id.ToString();
+        _guid = guid;
     }
 
     /// <inheritdoc />

@@ -1,4 +1,4 @@
-﻿using Common.Domain.Entities;
+﻿using Common.Domain.Entities.Abstractions;
 using Common.Domain.ValueObjects;
 using Xunit;
 
@@ -13,8 +13,8 @@ namespace Common.Domain.Tests.Entities
         [Fact]
         public void Test1()
         {
-            var entityOne = new TestEntity(Id<TestEntity>.New());
-            var entityTwo = new TestEntity(Id<TestEntity>.New());
+            var entityOne = new TestEntity(new Id<TestEntity>());
+            var entityTwo = new TestEntity(new Id<TestEntity>());
             Assert.NotEqual(entityOne.Id, entityTwo.Id);
         }
     }

@@ -55,7 +55,7 @@ public class UserRepository : IUserRepository
 
         if (result.Succeeded)
         {
-            var id = Id<User>.New(userModel.Id);
+            var id = new Id<User>(userModel.Id);
             var name = UserName.New(userModel.UserName);
             var user = User.New(id, name);
             return user;
@@ -85,6 +85,6 @@ public class UserRepository : IUserRepository
             throw new DomainException("Пароль пользователя некорректен");
         }
 
-        return User.New(Id<User>.New(userModel.Id), UserName.New(userModel.UserName));
+        return User.New(new Id<User>(userModel.Id), UserName.New(userModel.UserName));
     }
 }

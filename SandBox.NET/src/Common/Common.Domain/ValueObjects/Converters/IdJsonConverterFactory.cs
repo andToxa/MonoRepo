@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Common.Domain.ValueObjects;
+namespace Common.Domain.ValueObjects.Converters;
 
 /// <summary>
 /// <see cref="JsonConverterFactory"/> для <see cref="Id{T}"/>
@@ -21,7 +21,7 @@ public class IdJsonConverterFactory : JsonConverterFactory
     {
         /// <inheritdoc />
         public override Id<T>? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
-            Id<T>.New(reader.GetGuid());
+            new Id<T>(reader.GetGuid());
 
         /// <inheritdoc />
         public override void Write(Utf8JsonWriter writer, Id<T> value, JsonSerializerOptions options) =>

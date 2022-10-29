@@ -29,7 +29,7 @@ public class UserSignUpCommandHandler : IRequestHandler<UserSignUpCommand, UserS
         var userName = UserName.New(request.Name);
         var userPassword = UserPassword.New(request.Password);
         var user = await _userRepository.RegisterByUserNameAsync(userName, userPassword);
-        var userRegisteredEvent = new UserSignedUpEvent(id: user.Id, userName: user.Name);
+        var userRegisteredEvent = new UserSignedUpEvent(id: user.Id.ToString(), userName: user.Name);
         return userRegisteredEvent;
     }
 }
