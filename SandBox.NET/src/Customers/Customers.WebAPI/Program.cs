@@ -1,10 +1,7 @@
 ﻿using Common.Infrastructure.Extensions;
 using Common.WebAPI.Extensions.Swagger;
-using Identity.Application.Extensions;
-using Identity.Infrastructure.Extensions;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Customers.Application.Extensions;
+using Customers.Infrastructure.Extensions;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,8 +25,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerExtension(builder.Configuration);
 
 var app = builder.Build();
-
-app.UseMigrations();
 
 if (app.Environment.IsDevelopment())
 {
