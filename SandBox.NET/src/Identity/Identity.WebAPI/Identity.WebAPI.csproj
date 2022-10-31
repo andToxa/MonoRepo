@@ -7,12 +7,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Common\Common.WebAPI\Common.WebAPI.csproj" />
+      <ProjectReference Include="..\Identity.Application.Abstractions\Identity.Application.Abstractions.csproj" />
       <ProjectReference Include="..\Identity.Application\Identity.Application.csproj" />
       <ProjectReference Include="..\Identity.Infrastructure\Identity.Infrastructure.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>

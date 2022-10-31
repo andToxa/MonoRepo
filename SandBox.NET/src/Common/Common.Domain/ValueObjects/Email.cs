@@ -9,13 +9,9 @@ namespace Common.Domain.ValueObjects;
 /// </summary>
 public record Email
 {
-    private string _email;
+    private readonly string _email;
 
-    /// <summary>
-    /// Конструктор <see cref="Email"/>
-    /// </summary>
-    /// <param name="email">Электронная почта</param>
-    public Email(string email)
+    private Email(string email)
     {
         if (!IsValid(email))
         {
