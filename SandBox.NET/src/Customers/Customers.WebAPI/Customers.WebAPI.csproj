@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\..\Common\Common.WebAPI\Common.WebAPI.csproj" />
       <ProjectReference Include="..\Customers.Application\Customers.Application.csproj" />
       <ProjectReference Include="..\Customers.Infrastructure\Customers.Infrastructure.csproj" />
