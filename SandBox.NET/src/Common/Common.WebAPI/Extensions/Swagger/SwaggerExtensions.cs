@@ -25,18 +25,23 @@ namespace Common.WebAPI.Extensions.Swagger
                 Documents = new Dictionary<string, OpenApiInfo> { { "v1", new OpenApiInfo { Version = "v1" } } }
             };
 
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                foreach (var (documentName, documentInfo) in _settings.Documents!) c.SwaggerDoc(documentName, documentInfo);
+                foreach (var (documentName, documentInfo) in _settings.Documents!)
+                {
+                    options.SwaggerDoc(documentName, documentInfo);
+                }
 
                 var xmlDoc = Path.ChangeExtension((Assembly.GetEntryAssembly() ?? Assembly.GetExecutingAssembly()).Location, "xml");
                 if (File.Exists(xmlDoc))
                 {
-                    c.IncludeXmlComments(xmlDoc);
+                    options.IncludeXmlComments(xmlDoc);
                 }
 
-                c.CustomSchemaIds(type => type.FullName);
-                c.EnableAnnotations();
+                options.CustomSchemaIds(type => type.FullName);
+                options.EnableAnnotations();
+
+                options.AddBearer();
             });
         }
 
