@@ -33,4 +33,13 @@ public record Id<T>
     {
         return _guid.ToString();
     }
+
+    /// <summary>
+    /// Преобразование в <see cref="Guid"/>
+    /// </summary>
+    /// <returns><see cref="Guid"/></returns>
+    public Guid ToGuid()
+    {
+        return Guid.Parse(_guid.ToString());
+    }
 }

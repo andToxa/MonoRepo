@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\src\Identity\Identity.Domain\Identity.Domain.csproj" />
+      <ProjectReference Include="..\..\..\src\Generic\Identity\Identity.Domain\Identity.Domain.csproj" />
     </ItemGroup>
 
 </Project>
