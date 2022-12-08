@@ -1,6 +1,8 @@
 ﻿using Identity.Application.Abstractions;
 using Identity.Application.Commands;
 using Identity.Application.Events;
+using System;
+using System.Threading.Tasks;
 
 namespace Identity.WebAPI.Client;
 

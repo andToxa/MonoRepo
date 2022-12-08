@@ -1,16 +1,22 @@
 ﻿using Common.WebAPI.Extensions.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text.Json.Serialization;
+using System.Threading;
+using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
-var openidConfiguration = await OpenIdConnectConfigurationRetriever.GetAsync("http://keycloak8080.localhost:8080/realms/uber-popug-inc/.well-known/openid-configuration", new HttpDocumentRetriever() { RequireHttps = false }, CancellationToken.None);
+var openidConfiguration = await OpenIdConnectConfigurationRetriever.GetAsync("http://keycloak8080.localhost:8080/realms/uber-popug/.well-known/openid-configuration", new HttpDocumentRetriever() { RequireHttps = false }, CancellationToken.None);
 
 builder.Services.AddAuthentication(options =>
     {
@@ -19,17 +25,17 @@ builder.Services.AddAuthentication(options =>
     })
     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
     {
-        options.Authority = "http://keycloak8080.localhost:8080/realms/uber-popug-inc";
+        options.Authority = "http://keycloak8080.localhost:8080/realms/uber-popug";
         options.Audience = "uber-popug-tasks";
         options.RequireHttpsMetadata = false; // todo только при разработке
-        options.MetadataAddress = "http://keycloak8080.localhost:8080/realms/uber-popug-inc/.well-known/openid-configuration";
+        options.MetadataAddress = "http://keycloak8080.localhost:8080/realms/uber-popug/.well-known/openid-configuration";
         options.TokenValidationParameters = new TokenValidationParameters()
         {
             ValidateAudience = true,
             ValidAudience = "account",
 
             ValidateIssuer = true,
-            ValidIssuers = new[] { "http://keycloak8080.localhost:8080/realms/uber-popug-inc" },
+            ValidIssuers = new[] { "http://keycloak8080.localhost:8080/realms/uber-popug" },
 
             ValidateIssuerSigningKey = true,
             IssuerSigningKeys = openidConfiguration.SigningKeys,

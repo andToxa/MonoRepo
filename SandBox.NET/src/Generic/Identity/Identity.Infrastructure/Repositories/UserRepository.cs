@@ -85,6 +85,6 @@ public class UserRepository : IUserRepository
             throw new DomainException("Пароль пользователя некорректен");
         }
 
-        return User.New(new Id<User>(userModel.Id), UserName.New(userModel.UserName));
+        return User.New(new Id<User>(userModel.Id), UserName.New(userModel?.UserName ?? string.Empty));
     }
 }

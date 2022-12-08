@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 
-namespace UberPopug.Tasks.Controllers;
+namespace UberPopug.Tasks.WebAPI.Controllers;
 
 /// <summary>
 /// Контроллер
@@ -35,7 +36,7 @@ public class WeatherForecastController : ControllerBase
     /// </summary>
     /// <returns><see cref="ClaimsPrincipal"/></returns>
     [HttpGet]
-    public ClaimsPrincipal Get()
+    public ActionResult<ClaimsPrincipal> Get()
     {
         return HttpContext.User;
     }

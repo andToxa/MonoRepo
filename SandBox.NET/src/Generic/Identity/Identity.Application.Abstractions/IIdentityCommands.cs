@@ -1,6 +1,7 @@
 ﻿using Common.Domain.ValueObjects;
 using Identity.Application.Commands;
 using Identity.Application.Events;
+using System.Threading.Tasks;
 
 namespace Identity.Application.Abstractions;
 
@@ -14,7 +15,7 @@ public interface IIdentityCommands
     /// </summary>
     /// <param name="command"><see cref="UserSignUpCommand"/></param>
     /// <returns><see cref="Id{T}"/></returns>
-    public Task<UserSignedUpEvent> SignUpAsync(UserSignUpCommand command);
+    public Task<UserSignedUpEvent> SignUp(UserSignUpCommand command);
 
     /// <summary>
     /// Аутентификация пользователя
