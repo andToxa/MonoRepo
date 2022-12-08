@@ -15,7 +15,7 @@ public interface IIdentityCommands
     /// </summary>
     /// <param name="command"><see cref="UserSignUpCommand"/></param>
     /// <returns><see cref="Id{T}"/></returns>
-    public Task<UserSignedUpEvent> SignUp(UserSignUpCommand command);
+    public Task<UserSignedUpEvent> SignUpAsync(UserSignUpCommand command);
 
     /// <summary>
     /// Аутентификация пользователя
