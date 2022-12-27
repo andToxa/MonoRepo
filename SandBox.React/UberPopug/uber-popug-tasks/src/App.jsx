@@ -2,7 +2,6 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 // components
 import NavBar from './components/NavBar';
-import Footer from './components/Footer';
 import Home from './components/Home';
 
 import Resources from './components/Resources';
@@ -18,7 +17,6 @@ export default function App() {
                     <Route path='/resource' element={<Resources/>}/>
                 </Routes>
 
-                <Footer/>
             </BrowserRouter>
         </div>
     )
