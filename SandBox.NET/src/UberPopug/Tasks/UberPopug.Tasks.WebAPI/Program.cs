@@ -31,7 +31,7 @@ builder.Services.AddAuthentication(options =>
         options.MetadataAddress = "http://keycloak8080.localhost:8080/realms/uber-popug/.well-known/openid-configuration";
         options.TokenValidationParameters = new TokenValidationParameters()
         {
-            ValidateAudience = true,
+            ValidateAudience = false,
             ValidAudience = "account",
 
             ValidateIssuer = true,
