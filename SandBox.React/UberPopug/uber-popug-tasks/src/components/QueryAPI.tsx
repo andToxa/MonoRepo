@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
-const APIResponse = (props) => {
+export function APIResponse(props) {
     if (!props.response)
         return (<div/>);
     else
-        return (<pre>{props.response}</pre>);
+        return (<pre>{JSON.stringify(props.response, undefined, 2)}</pre>);
 }
 
 export default function QueryAPI(props) {
