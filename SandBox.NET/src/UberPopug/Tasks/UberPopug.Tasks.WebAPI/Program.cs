@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors();
+
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
 var openidConfiguration = await OpenIdConnectConfigurationRetriever.GetAsync("http://keycloak8080.localhost:8080/realms/uber-popug/.well-known/openid-configuration", new HttpDocumentRetriever() { RequireHttps = false }, CancellationToken.None);
@@ -122,6 +124,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseCors(policyBuilder => policyBuilder
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin());
 
 app.UseAuthorization();
 
