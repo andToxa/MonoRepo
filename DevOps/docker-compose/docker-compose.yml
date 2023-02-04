@@ -1,22 +1,48 @@
+name: "sandbox"
+
 services:
+  traefik:
+    image: traefik:2.9
+    hostname: traefik
+    ports:
+      - "8080:80"
+#      - "8088:8080" # dashboard
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+  postgres:
+    image: postgres:15-alpine
+    hostname: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres/postgresql.conf:/var/lib/postgresql/data/postgresql.conf
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - PGDATA=/var/lib/postgresql/data/pgdata
   keycloak:
     image: keycloak/keycloak:20.0
-    container_name: keycloak
-    restart: unless-stopped
     hostname: keycloak
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.keycloak.rule=Host(`keycloak.localhost`)"
+      - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
       - KC_HEALTH_ENABLED=true
       - KC_METRICS_ENABLED=true
-      - PROXY_ADDRESS_FORWARDING=true
-    command: start-dev --proxy passthrough --db postgres --db-url-host keycloak-db --db-username keycloak --db-password keycloak
+    command: start-dev --db postgres --db-url-host keycloak-db --db-username keycloak --db-password keycloak
     depends_on:
       - keycloak-db
   keycloak-db:
     image: postgres:15-alpine
-    container_name: keycloak-db
-    restart: unless-stopped
     hostname: keycloak-db
     volumes:
       - keycloak-db:/var/lib/postgresql/data
@@ -25,4 +51,5 @@ services:
       - POSTGRES_PASSWORD=keycloak
 
 volumes:
+  postgres:
   keycloak-db:
