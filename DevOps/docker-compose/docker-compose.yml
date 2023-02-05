@@ -3,7 +3,7 @@ name: "sandbox"
 services:
   traefik:
     image: traefik:2.9
-    hostname: traefik
+    hostname: traefik # http://localhost:8088
     ports:
       - "8080:80"
 #      - "8088:8080" # dashboard
@@ -28,7 +28,7 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
   keycloak:
     image: keycloak/keycloak:20.0
-    hostname: keycloak
+    hostname: keycloak # http://keycloak.localhost:8080/
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.keycloak.rule=Host(`keycloak.localhost`)"
@@ -49,6 +49,15 @@ services:
     environment:
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=keycloak
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    hostname: mailhog # http://mailhog.localhost:8080
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.mailhog.rule=Host(`mailhog.localhost`)"
+      - "traefik.http.services.mailhog.loadbalancer.server.port=8025"
+    ports:
+      - "25:1025"
 
 volumes:
   postgres:
