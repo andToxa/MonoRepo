@@ -14,6 +14,10 @@ services:
       - "--providers.docker.exposedbydefault=false"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    depends_on:
+      - keycloak # http://keycloak.local.gd:8080/
+      - mailhog  # http://mailhog.local.gd:8080
+
   postgres:
     image: postgres:15-alpine
     hostname: postgres
@@ -26,12 +30,13 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=root
       - PGDATA=/var/lib/postgresql/data/pgdata
+
   keycloak:
     image: keycloak/keycloak:20.0
-    hostname: keycloak # http://keycloak.localhost:8080/
+    hostname: keycloak
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.keycloak.rule=Host(`keycloak.localhost`)"
+      - "traefik.http.routers.keycloak.rule=Host(`keycloak.local.gd`)"
       - "traefik.http.services.keycloak.loadbalancer.server.port=8080"
     environment:
       - KEYCLOAK_ADMIN=admin
@@ -41,6 +46,7 @@ services:
     command: start-dev --db postgres --db-url-host keycloak-db --db-username keycloak --db-password keycloak
     depends_on:
       - keycloak-db
+
   keycloak-db:
     image: postgres:15-alpine
     hostname: keycloak-db
@@ -49,12 +55,13 @@ services:
     environment:
       - POSTGRES_USER=keycloak
       - POSTGRES_PASSWORD=keycloak
+
   mailhog:
     image: mailhog/mailhog:v1.0.1
-    hostname: mailhog # http://mailhog.localhost:8080
+    hostname: mailhog
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.mailhog.rule=Host(`mailhog.localhost`)"
+      - "traefik.http.routers.mailhog.rule=Host(`mailhog.local.gd`)"
       - "traefik.http.services.mailhog.loadbalancer.server.port=8025"
     ports:
       - "25:1025"
