@@ -1,7 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <ItemGroup>
-      <ProjectReference Include="..\Identity.Application.Abstractions\Identity.Application.Abstractions.csproj" />
-    </ItemGroup>
-
-</Project>

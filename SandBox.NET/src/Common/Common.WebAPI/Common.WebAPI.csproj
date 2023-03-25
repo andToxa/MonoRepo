@@ -17,8 +17,4 @@
       </Content>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Common.Application\Common.Application.csproj" />
-    </ItemGroup>
-
 </Project>

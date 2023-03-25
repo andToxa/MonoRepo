@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <ItemGroup>
-      <ProjectReference Include="..\Identity.Application.Commands\Identity.Application.Commands.csproj" />
-      <ProjectReference Include="..\Identity.Application.Events\Identity.Application.Events.csproj" />
-      <ProjectReference Include="..\Identity.Application.Queries\Identity.Application.Queries.csproj" />
-    </ItemGroup>
-
-</Project>
