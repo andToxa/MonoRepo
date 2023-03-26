@@ -9,10 +9,11 @@ namespace UberPopug.Tasks.WebAPI.Controllers;
 /// Контроллер
 /// </summary>
 [ApiController]
+[Route("api/v{version:apiVersion}/[controller]")]
 [Authorize]
+[ApiVersion("1.0")]
 /*[Authorize(Roles = "FieldOM_supportTeam")]
 [Authorize(Policy = "Policy Name")]*/
-[Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -34,6 +35,9 @@ public class WeatherForecastController : ControllerBase
     /// <summary>
     /// Получение данных
     /// </summary>
+    /// <remarks>
+    /// Пример запроса
+    /// </remarks>
     /// <returns><see cref="ClaimsPrincipal"/></returns>
     [HttpGet]
     public ActionResult<ClaimsPrincipal> Get()

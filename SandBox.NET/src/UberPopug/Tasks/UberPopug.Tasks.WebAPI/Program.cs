@@ -1,6 +1,8 @@
 ﻿using Common.WebAPI.Extensions.Keycloak;
 using Common.WebAPI.Extensions.Swagger;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Text.Json.Serialization;
@@ -9,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors();
 
-builder.Services.AddKeycloakAuthentication("http://keycloak.local.gd:8080//realms/uber-popug");
+builder.Services.AddKeycloakAuthentication(builder.Configuration.GetValue<string>("Keycloak:Url") !);
 
 builder.Services.AddAuthorization(options =>
 {
@@ -37,7 +39,20 @@ builder.Services.AddAuthorization(options =>
 */
 });
 
-builder.Services.AddControllersWithViews().AddJsonOptions(options =>
+builder.Services.AddApiVersioning(setup =>
+{
+    setup.DefaultApiVersion = new ApiVersion(1, 0);
+    setup.AssumeDefaultVersionWhenUnspecified = true;
+    setup.ReportApiVersions = true;
+});
+
+builder.Services.AddVersionedApiExplorer(setup =>
+{
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+
+builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.Never;
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles; // todo надо ли?
