@@ -1,0 +1,8 @@
+# @name get user token
+# @no-cookie-jar
+POST http://keycloak.local.gd:8080/realms/uber-popug/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=uber-popug-tasks-frontend&username=employee@uber.popug.inc&password=1q2w3e4r&grant_type=password
+
+###

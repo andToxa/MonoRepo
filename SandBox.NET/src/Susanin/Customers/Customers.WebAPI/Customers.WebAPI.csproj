@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Common\Common.WebAPI\Common.WebAPI.csproj" />
+      <ProjectReference Include="..\Customers.Application\Customers.Application.csproj" />
+      <ProjectReference Include="..\Customers.Infrastructure\Customers.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
