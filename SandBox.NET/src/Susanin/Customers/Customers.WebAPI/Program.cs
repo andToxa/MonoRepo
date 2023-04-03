@@ -3,10 +3,15 @@ using Common.WebAPI.Extensions.Swagger;
 using Customers.Application.Extensions;
 using Customers.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 

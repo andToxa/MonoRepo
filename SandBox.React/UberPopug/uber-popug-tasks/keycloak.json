@@ -1,0 +1,8 @@
+{
+  "realm": "uber-popug",
+  "auth-server-url": "http://keycloak8080.localhost:8080",
+  "ssl-required": "external",
+  "resource": "uber-popug-tasks",
+  "public-client": true,
+  "confidential-port": 0
+}

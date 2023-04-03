@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Common.WebAPI.Extensions.Swagger
 {
     /// <summary>
-    /// Фильтр безопасности сваггера 1С-версии
+    /// Фильтр безопасности
     /// </summary>
     public class SwaggerBearerOperationFilter : IOperationFilter
     {

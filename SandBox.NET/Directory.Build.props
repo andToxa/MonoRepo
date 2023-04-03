@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFramework>net7.0</TargetFramework>
+        <LangVersion>11</LangVersion>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <WarningsNotAsErrors>
@@ -11,6 +11,5 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="andToxa.StyleCop" Version="1.0.7" />
-        <PackageReference Include="MappingGenerator" Version="2022.9.49" />
     </ItemGroup>
 </Project>

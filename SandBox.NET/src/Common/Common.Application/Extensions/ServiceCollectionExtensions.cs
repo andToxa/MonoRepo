@@ -1,7 +1,4 @@
-﻿using Common.Application.Services;
-using Common.Domain.Services;
-using MediatR;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Common.Application.Extensions
@@ -15,11 +12,6 @@ namespace Common.Application.Extensions
         /// <returns><seealso cref="IServiceCollection"/></returns>
         public static IServiceCollection AddCommonApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddMediatR(services.GetType());
-
-            // шина событий
-            services.AddScoped<IEventBusService, EventBusService>();
-
             return services;
         }
     }

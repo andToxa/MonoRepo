@@ -1,15 +1,1 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Customers.Application.Commands\Customers.Application.Commands.csproj" />
-      <ProjectReference Include="..\Customers.Application.Events\Customers.Application.Events.csproj" />
-      <ProjectReference Include="..\Customers.Application.Queries\Customers.Application.Queries.csproj" />
-    </ItemGroup>
-
-</Project>
+<Project Sdk="Microsoft.NET.Sdk" />
