@@ -5,11 +5,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Marten" Version="5.11.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Common\Common.WebAPI\Common.WebAPI.csproj" />
+      <ProjectReference Include="..\UberPopug.Tasks.Domain\UberPopug.Tasks.Domain.csproj" />
     </ItemGroup>
 
 </Project>
