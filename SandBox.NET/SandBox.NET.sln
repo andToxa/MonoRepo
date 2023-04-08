@@ -3,8 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{56F0CB6A-8CCA-4412-A632-8F9C1D89DF0E}"
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
-	Directory.Build.props = Directory.Build.props
 	CHANGELOG.md = CHANGELOG.md
+	Directory.Build.targets = Directory.Build.targets
 EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5FACB0C7-3546-43A6-BD36-098463DF52E4}"

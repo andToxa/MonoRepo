@@ -1,4 +1,5 @@
 ﻿using Common.Domain.ValueObjects;
+using System;
 
 namespace UberPopug.Tasks.Domain;
 
@@ -10,14 +11,23 @@ public class Task
     /// <summary>
     /// Конструктор <see cref="Task"/>
     /// </summary>
-    /// <param name="id"><see cref="Id{T}"/></param>
-    public Task(Id<Task> id)
+    /// <param name="taskId"><see cref="Id{T}"/></param>
+    public Task(Id<Task> taskId)
     {
-        Id = id;
+        TaskId = taskId;
     }
 
     /// <summary>
     /// Идентификатор задачи
     /// </summary>
-    public Id<Task> Id { get; }
+    public Id<Task> TaskId { get; }
+
+    /// <summary>
+    /// Идентификатор в виде <see cref="Guid"/>
+    /// </summary>
+    public Guid Guid
+    {
+        get => TaskId.ToGuid();
+        set { }
+    }
 }
