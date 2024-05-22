@@ -1,0 +1,110 @@
+{% extends 'store/layouts/main.html' %}
+
+{% block content %}
+
+<div class="py-3 bg-primary">
+    <div class="container">
+        <a class="text-white" href="{% url 'home' %}"> Главная </a>
+         /
+         <a class="text-white" href="{% url 'checkout' %}"> Оформление заказа </a>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <form action="{% url "placeorder" %}" method="POST">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Введите ваши данные: </h6>
+                        <hr>
+                        <div class="row checkoutform">
+                            <div class="col-md-6">
+                                <label>Имя</label>
+                                <input type="text" required value = "{{ request.first_name }}" class="form-control" name="fname" placeholder="Введите ваше имя">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Фамилия</label>
+                                <input type="text" required value = "{{ request.user.last_name }}" class="form-control" name="lname" placeholder="Введите вашу фамилию">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Почта</label>
+                                <input type="text" required value = "{{ request.user.email }}" class="form-control" name="email" placeholder="Введите почту">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Номер телефона</label>
+                                <input type="text" required value = "{{ userprofile.phone }}" class="form-control" name="phone" placeholder="Введите ваш номер телефона">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label>Область</label>
+                                <input type="text" required value = "{{ userprofile.area }}" class="form-control" name="area" placeholder="Введите название области">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label>Город</label>
+                                <input type="text" required value = "{{ userprofile.city }}" class="form-control" name="city" placeholder="Введите город">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Улица</label>
+                                <input type="text" required value = "{{ userprofile.adress }}" class="form-control" name="adress" placeholder="Введите улицу">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Номер дома</label>
+                                <input type="text" required value = "{{ userprofile.housenum }}" class="form-control" name="housenum" placeholder="Введите номер дома">
+                            </div>
+                            <div class="col-md-6 mt-2">
+                                <label>Номер квартиры</label>
+                                <input type="text" required value = "{{ userprofile.flatnumb }}" class="form-control" name="flatnumb" placeholder="Введите номер квартиры">
+                            </div>
+                        </div>
+                        </hr>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h6>Товары в корзине:</h6>
+                        <hr>
+                        {% if cartitems %}
+                            <table class="table table-stripeds"> <!--table-bordered-->
+                                <thead>
+                                    <tr>
+                                        <th>Товар</th>
+                                        <th>Количество</th> <!--найти как сделать чтобы посередине показывалось-->
+                                        <th>Цена</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in cartitems %}
+                                        <tr>
+                                            <td> 
+                                                <img src = "{{ item.product.product_image.url}}" height="50px" class="me-2" width="50px">
+                                                
+                                                {{item.product.name}} 
+                                            </td>
+                                            <td> {{item.product_qty}} </td>
+                                            <td> {{item.product.selling_price | stringformat:'d' }} Руб. </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <h6 class="fw-bold">Суммарная цена:
+                                <span class="float-end"> {{ total_price | stringformat:'d' }} Руб.</span>
+                                <input type="hidden" value={{ total_price }} name="total_price">
+                            </h6>
+                            <input type="hidden" value="COD" name="payment_mode">
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-success w-100"> COD | Place Order </a>
+                            </div>
+                        {% else %}
+                            <h4>Пустая корзина</h4>
+                        {% endif %}
+                    </div>
+                </div>        
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
