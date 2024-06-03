@@ -57,3 +57,6 @@ def searchproduct(request):
                 return redirect(request.META.get('HTTP_REFERER'))         
 
     return redirect(request.META.get('HTTP_REFERER'))
+
+def payment(request):
+    return render(request, "store/payment.html")

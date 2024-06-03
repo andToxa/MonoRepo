@@ -105,4 +105,4 @@ def placeorder(request):
 
         messages.success(request, "Заказ был успешно создан.")
 
-    return redirect('/')
+    return redirect('my-orders/')

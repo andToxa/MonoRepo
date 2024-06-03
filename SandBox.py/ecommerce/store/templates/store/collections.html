@@ -2,38 +2,38 @@
 
 {% block content %}
 
-<div class="py-3 bg-primary">
-    <div class="container">
-        <a class="text-white" href="{% url 'home' %}"> Главная </a>
-         /
-        <a class="text-white" href="{% url 'collections' %}"> Каталог </a>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <!--<h1>Каталог</h1>-->
-            <br>
-
-            <div class="row">
-            {% for item in category %}
-                <div class="col-md-3">
-                    <div class="card">
-                        <a href="{% url 'collectionsview' item.slug %}">
-                            <div class="card-body">
-                                <div class="category-image">
-                                    <img src={{ item.image.url }} act="Category image" class="w-100"/>
-                                </div>
-                                <h4 class="text-center"> {{ item.name }} </h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            {% endfor %}
+    <div class="py-3 bg-primary">
+        <div class="container">
+            <a class="text-white" href="{% url 'home' %}"> Главная </a>
+            /
+            <a class="text-white" href="{% url 'collections' %}"> Каталог </a>
         </div>
     </div>
-</div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!--<h1>Каталог</h1>-->
+                <br>
+
+                <div class="row">
+                    {% for item in category %}
+                        <div class="col-md-3">
+                            <div class="card">
+                                <a href="{% url 'collectionsview' item.slug %}">
+                                    <div class="card-body">
+                                        <div class="category-image">
+                                            <img src="{{ item.image.url }}" alt="Category image" class="w-100"/>
+                                        </div>
+                                        <h4 class="text-center"> {{ item.name }} </h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

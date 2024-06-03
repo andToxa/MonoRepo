@@ -27,4 +27,5 @@ urlpatterns = [
     path('my-orders/', order.index, name="myorders"),
     path('view-order/<str:t_no>', order.vieworder, name="orderview"),
     
+    path('payment/', views.payment, name="payment"),
 ]

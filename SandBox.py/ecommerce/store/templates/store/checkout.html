@@ -57,7 +57,7 @@
                                 <input type="text" required value = "{{ userprofile.flatnumb }}" class="form-control" name="flatnumb" placeholder="Введите номер квартиры">
                             </div>
                         </div>
-                        </hr>                        
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,8 @@
                             </h6>
                             <input type="hidden" value="COD" name="payment_mode">
                             <div class="mt-3">
-                                <button type="submit" class="btn btn-success w-100"> COD | Place Order </a>
+                                <!--переадресует на 'payment' можно исправить внутри def place order внутри checkout.py в самом конце-->
+                                <button type="submit" class="btn btn-success w-100"> Создать заказ </button>
                             </div>
                         {% else %}
                             <h4>Пустая корзина</h4>
