@@ -72,9 +72,10 @@
                             <h6>Статус заказа: {{ order.status }}</h6>   
                             <h6>Трэк номер: {{ order.tracking_no }}</h6>
                             <div class="container2">
-                                <form action=""> 
-                                    <input type="hidden" class="prod_id" value="{{ order.tracking_no }}">      
-                                    <a href="{% url 'payment' %}" class="submit-btn">Оплатить</a>
+                                <form action="/payment/" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="tracking_no" value="{{ order.tracking_no }}">      
+                                    <input href="{% url 'payment' %}" type="submit" class="submit-btn" value="Оплатить">
                                 </form>
                             </div>
                         </div>
