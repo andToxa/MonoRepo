@@ -71,13 +71,15 @@
                             <h6>Вид оплаты: {{ order.payment_mode }}</h6>
                             <h6>Статус заказа: {{ order.status }}</h6>   
                             <h6>Трэк номер: {{ order.tracking_no }}</h6>
+                        {% if order.status != 'Completed' %}
                             <div class="container2">
                                 <form action="/payment/" method="post">
                                     {% csrf_token %}
-                                    <input type="hidden" name="tracking_no" value="{{ order.tracking_no }}">      
+                                    <input type="hidden" name="tracking_no" value="{{ order.tracking_no }}">
                                     <input href="{% url 'payment' %}" type="submit" class="submit-btn" value="Оплатить">
                                 </form>
                             </div>
+                        {% endif %}
                         </div>
                     </div>
                 </div>
