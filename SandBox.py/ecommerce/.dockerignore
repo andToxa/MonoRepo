@@ -1,0 +1,8 @@
+.idea/
+.venv/
+.dockerignore
+
+db/
+docker-compose.yml
+Dockerfile
+.env
